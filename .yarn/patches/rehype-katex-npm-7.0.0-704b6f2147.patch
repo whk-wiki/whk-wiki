@@ -1,0 +1,12 @@
+diff --git a/lib/index.js b/lib/index.js
+index 1031db0a0060cb22d0a4099428aaaf671e99119a..30f83c51c5d050f06df4bcfa1e70ba7132519545 100644
+--- a/lib/index.js
++++ b/lib/index.js
+@@ -15,6 +15,7 @@ import {fromHtmlIsomorphic} from 'hast-util-from-html-isomorphic'
+ import {toText} from 'hast-util-to-text'
+ import katex from 'katex'
+ import {SKIP, visitParents} from 'unist-util-visit-parents'
++require('katex/contrib/mhchem');
+ 
+ /** @type {Readonly<Options>} */
+ const emptyOptions = {}
