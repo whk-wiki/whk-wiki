@@ -46,7 +46,7 @@ a^2(x-c)^2+a^2y^2=a^4+c^2x^2-2a^2cx\\
 $$
 两边同除 $a^2(a^2-c^2)$：
 $$
-\frac{x^2}{a^2}+\frac{y^2}{a_2-c^2}=1
+\frac{x^2}{a^2}+\frac{y^2}{a^2-c^2}=1
 $$
 换元 $b^2=a^2-c^2$：
 $$
@@ -56,7 +56,7 @@ $$
 
 ## 参数方程
 
-椭圆可以看做**一个圆经过“伸缩”后得到的图形**（人教 A 版选必一 P108 例 2），所以类比圆的参数方程可以得到：
+椭圆可以看做**一个圆经过「伸缩」后得到的图形**（人教 A 版选必一 P108 例 2），所以类比圆的参数方程可以得到：
 
 在椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$ 上的点 $P$ 坐标可表示为 $(a\cos\theta,b\sin\theta)$，其中 $\theta$ 为参数。
 
@@ -323,18 +323,18 @@ $$
 
 ### 弦中点
 
-直线 $y=kx+m$ 和椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$ 交于两点 $A,B$。（斜率不存在的平凡情况不做讨论）
+直线 $y=kx+m(k\ne0)$ 和椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1(a>b>0)$ 交于两点 $A,B$。（斜率不存在的平凡情况不做讨论）
 
-设线段 $AB$ 中点 $M(x_0,y_0)$，有：
+设 $A(x_1,y_1),B(x_2,y_2)$，线段 $AB$ 中点 $M(x_0,y_0)=\left(\dfrac{x_1+x_2}2,\dfrac{y_1+y_2}2\right)$，有：
 $$
-k_{AB}k_{OM}=-\dfrac{b^2}{a^2}
+k_{AB}k_{OM}=-\dfrac{b^2}{a^2}=e^2-1
 $$
 
-如果椭圆焦点在 $y$ 轴上，则 $k_{AB}\times k_{OM}=-\dfrac{a^2}{b^2}$。
+如果椭圆焦点在 $y$ 轴上，则 $k_{AB}k_{OM}=-\dfrac{a^2}{b^2}$。
 
 #### 数形结合理解
 
-对于椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$，其可以看做由圆 $\Omega:x^2+y^2=1$ 经过“伸缩”得到的。
+对于椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$，其可以看做由圆 $\Omega:x^2+y^2=1$ 经过「伸缩」得到的。
 
 具体地，对于一个在圆 $\Omega$ 上的点 $P'(x,y)$，点 $P(ax,by)$ 一定在椭圆 $C$ 上。显然每个 $P$ 和 $P'$ 一一对应（构成双射）。
 
@@ -348,13 +348,13 @@ $$
 
 ##### 联立法
 
+直线 $l_{AB}:y=kx+m$ 与椭圆方程联立得
 $$
 \begin{cases}
 y=kx+m\\
 \dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1
 \end{cases}
 $$
-
 带入并化简：
 $$
 \begin{gathered}
@@ -373,37 +373,30 @@ k_{OM}&=\frac{y_0}{x_0}\\
 &=-\frac{b^2}{a^2k}
 \end{aligned}
 $$
-所以 $k_{AB}k_{AM}=-\dfrac{b^2}{a^2}$，证毕。
+所以 $k_{AB}k_{OM}=-\dfrac{b^2}{a^2}=e^2-1$，证毕。
 
 ##### 点差法
 
-$A,B$ 都满足椭圆方程：
+$A(x_1,y_1),B(x_2,y_2)$ 在椭圆上，于是有
 $$
 \begin{gathered}
 \dfrac{x_1^2}{a^2}+\dfrac{y_1^2}{b^2}=1\\
 \dfrac{x_2^2}{a^2}+\dfrac{y_2^2}{b^2}=1
 \end{gathered}
 $$
-相减得到：
+相减得到
 $$
 \begin{gathered}
 \dfrac{x_1^2-x_2^2}{a^2}+\dfrac{y_1^2-y_2^2}{b^2}=0\\
 \dfrac{(x_1+x_2)(x_1-x_2)}{a^2}+\dfrac{(y_1+y_2)(y_1-y_2)}{b^2}=0
 \end{gathered}
 $$
-因为斜率存在，所以 $x_1-x_2\neq 0$，两边同时除去：
+由于直线 $AB$ 的斜率存在且不为 $0$，根据椭圆的对称性，$x_1-x_2\ne0$，$x_1+x_2\ne0$，则上式即为
 $$
-\dfrac{x_1+x_2}{a^2}+k_{AB}\cdot\dfrac{y_1+y_2}{b^2}\cdot=0
+\frac{(y_1+y_2)(y_1-y_2)}{(x_1+x_2)(x_1-x_2)}=-\frac{b^2}{a^2}=e^2-1
 $$
-根据中点坐标公式：
+根据中点坐标公式，$M\left(\dfrac{x_1+x_2}2,\dfrac{y_1+y_2}2\right)$，所以
 $$
-\dfrac{2x_0}{a^2}+k_{AB}\cdot\dfrac{2y_0}{b^2}=0
-$$
-显然 $x_0\neq 0$，除去：
-$$
-\begin{gathered}
-\dfrac{1}{a^2}+k_{AB}k_{OM}\cdot\dfrac{1}{b^2}=0\\
-k_{AB}k_{OM}=-\dfrac{b^2}{a^2}
-\end{gathered}
+k_{AB}k_{OM}=\frac{y_1-y_2}{x_1-x_2}\cdot\frac{\frac{y_1+y_2}2}{\frac{x_1+x_2}2}=-\frac{b^2}{a^2}=e^2-1
 $$
 证毕。
