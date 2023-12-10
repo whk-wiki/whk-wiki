@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1,
+sidebar_position: 1
 ---
 
 # 等式与不等式的基本性质
