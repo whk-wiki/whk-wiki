@@ -1,3 +1,7 @@
+---
+sidebar_position: 1,
+---
+
 # 等式与不等式的基本性质
 
 这篇文章基本上是基于教材重温小学、初中的知识．
@@ -24,7 +28,7 @@
 关于应用传递性时能否取等：
 
 - $a\ge b,b\ge c \implies a\ge c$．
-- $a\ge b,b>c \mathrm{\ or\ } a>b,b\ge c \implies a>c$．
+- $a\ge b,b>c\ 或\ a>b,b\ge c \implies a>c$．
 
 ## 不等式的性质拓展
 
@@ -33,7 +37,7 @@
 - $a>b,ab>0 \implies \dfrac1a<\dfrac1b$．
 - $a<0<b \implies \dfrac1a<0<\dfrac1b$．
 - $a>b>0,c>d>0 \implies \dfrac ad>\dfrac bc$．
-- $0<a<m<b$ 或 $a<m<b<0 \implies \dfrac1b<\dfrac1m<\dfrac1a$．
+- $0<a<m<b\ 或\ a<m<b<0 \implies \dfrac1b<\dfrac1m<\dfrac1a$．
 
 ### 有关分数的性质
 
@@ -43,12 +47,13 @@
   
 - 假分数：$\dfrac{a+m}{b+m}<\dfrac ab<\dfrac{a-m}{b-m}$．
 
-即真分数越加越大，假分数越加越小．
+即真分数越加越大，假分数越加越小．可以用作差法证明．
 
 ### 其他性质
 
 - $a<b,c<d \implies a-d<b-c$．
-- $a^2\ge0$，其中 $a$ 为任意实数．
+- 对于任意 $a\in\R$，有 $a^2\ge0$，当且仅当 $a=0$ 时等号成立．
+- 对于任意 $a,b\in\R$，有 $a^2+b^2\ge2ab$，当且仅当 $a=b$ 时等号成立．证明：$(a-b)^2=a^2+b^2-2ab\ge0$，所以 $a^2+b^2\ge2ab$．
 
 ## 不等式基本题型
 
@@ -87,7 +92,7 @@
 
 ### 作差法与作商法比较大小
 
-证明不等式的常用方法有：作差法、作商法、反证法、同构法、放缩法等．其中同构法与放缩法将在之后提及．下面主要介绍作差法与作商法．
+证明不等式的常用方法有：作差法、作商法、反证法、同构法、放缩法等．其中同构法与放缩法将在之后提及．下面主要介绍 **作差法** 与 **作商法**．
 
 为了将不等式两侧的数或式子移至同一侧，并且使另一侧留下来的数易于比较，我们可以采用作差法或作商法．
 
@@ -119,7 +124,7 @@ $$
 
 :::tip 例 2 解答 2（作商法）
 
-首先有 $p=\dfrac{a^3+b^3}{ab}=\dfrac{(a+b)(a^2-ab+b^2)}{ab}$，又 $a^2+b^2\ge2ab$（见[基本不等式](https://whk-wiki.github.io/whk-wiki/math/inequality/am-gm-inequality)一节），因此
+首先有 $p=\dfrac{a^3+b^3}{ab}=\dfrac{(a+b)(a^2-ab+b^2)}{ab}$，又 $a^2+b^2\ge2ab$（参见上文[不等式的其他性质](https://whk-wiki.github.io/whk-wiki/math/inequality/basic-properties#%E5%85%B6%E4%BB%96%E6%80%A7%E8%B4%A8)），因此
 
 $$
 \dfrac pq=\dfrac{a^2-ab+b^2}{ab}\ge\dfrac{2ab-ab}{ab}=1,
@@ -149,3 +154,44 @@ $$
 
 :::
 
+## 糖水不等式的应用
+
+:::info 例 4
+
+在锐角三角形 $ABC$ 中，求证：
+
+（1）$\dfrac A{B+C}+\dfrac B{C+A}+\dfrac C{A+B}<2$；
+
+（2）$\dfrac c{1+c}<\dfrac a{1+a}+\dfrac b{1+b}$．
+
+:::
+
+:::tip 例 4 证明
+
+（1）考虑将分母全部转化为 $A+B+C$ 以合并不等式左边的三个分式．观察到不等式具有轮换性．在锐角 $\triangle ABC$ 中，$A,B,C>0$，且 $A<B+C,B<C+A,C<A+B$，由糖水不等式有
+$$
+\begin{gathered}
+\frac A{B+C}<\frac{2A}{A+B+C}, \\
+\frac B{C+A}<\frac{2B}{A+B+C}, \\
+\frac C{A+B}<\frac{2C}{A+B+C}. \\
+\end{gathered}
+$$
+由不等式的同向可加性，三式相加得
+$$
+\begin{aligned}
+    \frac A{B+C}+\frac B{C+A}+\frac C{A+B}&<\frac{2A}{A+B+C}+\frac{2B}{A+B+C}+\frac{2C}{A+B+C} \\
+    &=\frac{2A+2B+2C}{A+B+C}=2.
+\end{aligned}
+$$
+证毕．
+
+（2）考虑将分母转化为 $1+a+b$ 以合并不等式右边的两个分式．可以猜想与三角形的三边关系有关．在锐角 $\triangle ABC$ 中，$c<a+b$，所以 $a+b-c>0$，由糖水不等式有
+$$
+\begin{aligned}
+    \frac c{1+c}<\frac{c+(a+b-c)}{1+c+(a+b-c)}&=\frac{a+b}{1+a+b}\\
+    &=\frac a{1+a+b}+\frac b{1+a+b}<\frac a{1+a}+\frac b{1+b}.
+\end{aligned}
+$$
+证毕．
+
+:::
