@@ -1,4 +1,4 @@
-# 功与能
+# 专题
 
 import DocCardList from '@theme/DocCardList';
 
