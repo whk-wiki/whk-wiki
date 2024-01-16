@@ -1,4 +1,4 @@
-# 机械波
+# 机械振动与机械波
 
 import DocCardList from '@theme/DocCardList';
 
