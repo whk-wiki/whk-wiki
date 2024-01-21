@@ -71,6 +71,25 @@ $$
 
 用 **Venn 图** 可以形象地表示集合以及集合间的包含关系．这种表示方法在小学、初中已经学过，不再赘述．
 
+### 区间
+
+另一种表示 **一个范围内的所有实数构成的数集** 的方法是 **区间**．如：
+- $[a,b]=\{x\in\R\mid a\le x\le b\}$．
+- $[a,b)=\{x\in\R\mid a\le x<b\}$．
+- $(a,b]=\{x\in\R\mid a<x\le b\}$．
+- $(a,b)=\{x\in\R\mid a<x<b\}$．
+- $[a,+\infty)=\{x\in\R\mid x\ge a\}$．
+- $(a,+\infty)=\{x\in\R\mid x>a\}$．
+- $(-\infty,b]=\{x\in\R\mid x\le b\}$．
+- $(-\infty,b)=\{x\in\R\mid x<b\}$．
+- $(-\infty,+\infty)=\R$．
+
+总之，我们用方括号表示包含端点，圆括号表示不包含端点．正、负无穷一般用圆括号．
+
+另外，用区间的并表示「或」，如 $(-\infty,1)\cup\left[\dfrac32,+\infty\right)=\left\{x\in\R\mid x<1\ 或\ x\ge\dfrac32\right\}$，$(-\infty,2)\cup(2,+\infty)=\{x\in\R\mid x\ne2\}$．
+
+注：正无穷 $+\infty$ 中的正号 $+$ 有时可以省略．
+
 ## 集合间的基本关系
 
 集合间的关系就是包含与被包含的关系．
@@ -115,7 +134,7 @@ $$
 
 ### 交集
 
-一般地，由所有属于集合 $A$ *且*属于集合 $B$ 的元素组成的集合，称为集合 $A$ 与 $B$ 的交集，记作 $A\cap B$（读作「$A$ 交 $B$」），即
+一般地，由所有属于集合 $A$ *且*属于集合 $B$ 的元素组成的集合，称为集合 $A$ 与 $B$ 的 **交集**，记作 $A\cap B$（读作「$A$ 交 $B$」），即
 
 $$
 A\cap B\coloneqq\{x\mid x\in A,\mathrm{and\ }x\in B\}.
