@@ -48,7 +48,10 @@ const config = {
 				// Remove this to remove the "edit this page" links.
 				editUrl: 'https://github.com/whk-wiki/whk-wiki/tree/main/',
 				beforeDefaultRemarkPlugins: [remarkMath],
-				beforeDefaultRehypePlugins: [[rehypeKatex, { strict: true }]],
+				beforeDefaultRehypePlugins: [[rehypeKatex, {
+												strict: true,
+												macros: require('./config/macros.config').default
+											}]],
 				showLastUpdateAuthor: true,
 				showLastUpdateTime: true,
 			},

@@ -97,3 +97,9 @@ span.mord.cjk_fallback {
     display: flex;
 	justify-content: center;
 }
+
+table {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
