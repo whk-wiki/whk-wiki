@@ -164,7 +164,7 @@ $$
 
 ## 值域型问题
 
-这种问题的形式是：给定 **条件集** $\Gamma$（元素为命题函数）和一个 **目标函数** $f(x, y, \ldots)$，求 $f(x, y, \ldots)$ 的取值范围（值域）．如：
+这种问题的形式是：给定 **条件集** $\Gamma$（元素为命题函数）和一个 **目标函数** $f$，求 $f$ 的取值范围（值域）．如：
 
 > 已知 $x \ge 0$，$y < 0$，求 $2x - y$ 的取值范围．
 
@@ -266,3 +266,101 @@ $$
 
 - **无限**：如条件集为 $\varnothing$ 时，$x$ 不存在最大值．
 - **渐近**：如条件集为 $\{[x > 0]\}$ 时，$\dfrac 1 x$ 不存在最小值（只能渐近 $0$）．
+
+## 常见操作的逻辑学意义
+
+### 问题的弱化，强化，等价变换
+
+根据假言三段论，我们有
+
+$$
+(\forall x, P(x) \to Q(x)) \land (\forall x, Q(x) \to R(x)) \implies \forall x, P(x) \to R(x)
+$$
+
+即
+
+$$
+(P(x) \implies Q(x)) \land (Q(x) \implies R(x)) \implies (P(x) \implies R(x))
+$$
+
+这是 $\implies$ 的传递性．这里最外层的 $\implies$ 应该理解为：$P$，$Q$，$R$ 取任意谓词时，只要左侧成立，右侧就成立．
+
+更进一步我们可以推出，当 $P(x) \implies P'(x)$ 成立时：
+
+$$
+(P(x) \implies Q(x)) \impliedby (P'(x) \implies Q(x))
+$$
+
+如果 $P(x) \implies Q(x)$ 是一个要证明的问题，则上面的结论等价于：用 $P(x)$（**条件**）的 **不强条件（必要条件）** 替代自己后，待证明问题 **不变弱**．也就是说：
+
+- 当我们证明出 $P'(x) \implies Q(x)$ 后，待证明问题一定可以直接证明成立．
+- 但是 $P(x) \implies Q(x)$ 成立，不一定意味着 $P'(x) \implies Q(x)$ 成立（注意只是不一定，不是一定不，只是一部分谓词 $P$，$Q$ 可能不成立）．
+
+对称地，用 $P(x)$（**条件**）的 **不弱条件（充分条件）** 替代自己后，待证明问题 **不变强**：
+
+- 如果 $P(x) \implies Q(x)$ 成立，则 $P'(x) \implies Q(x)$ 一定成立．
+- 但是证明出 $P'(x) \implies Q(x)$，待证明问题不能直接由此证明成立．
+
+同样地，$Q(x)$（**结论**）的 **不强条件（必要条件）** 替代自己后，待证明问题 **不变强**，反之同理．
+
+同时，如果 **条件** 或 **结论** 进行等价变换，问题显然仍然等价．
+
+总之：
+
+- **弱化条件** 或 **强化结论** 会 **强化问题**．强化问题不一定成立，但强化问题做出后，原问题自动解出．常见于 **不等式的放缩**，而问题强化至不成立的现象称作 **放缩过度**．
+- **强化条件** 或 **弱化结论** 会 **弱化问题**．弱化问题一定成立（只要原问题成立），但弱化问题做出不能自动解出强化问题．常见于 **通过弱化问题的方式找思路**．
+- **等价条件** 或 **等价结论**，**问题等价**．我们可以通过将条件或结论等价为 **更简单，更容易处理的形式**，不影响题目的同时，使得题目更容易解答．
+
+最后，对于 $\alpha = \alpha_1 \land \alpha_2 \land \cdots \land \alpha_n$，强化或弱化任何一个 $\alpha_i$，都会使得 $\alpha$ 的强度做相同变化．感兴趣的读者可以自行证明，但感性理解已经足够．
+
+所以，强化或弱化任何一个子条件，就是在强化或弱化整个条件．
+
+### 分类讨论
+
+观察下面的例子：
+
+> 证明：$|x + y| \ge 0$．
+>
+> - 当 $x + y > 0$ 时，$|x + y| = x + y > 0$．
+> - 当 $x + y = 0$ 时，$|x + y| = 0$．
+> - 当 $x + y < 0$ 时，$|x + y| = -(x + y) > 0$．
+> 综上，$|x + y| \ge 0$．
+
+上面的证明就采用了分类讨论．它的逻辑学本质是什么？
+
+我们将前提集中的所有条件命题函数并成一个大条件 $\alpha$，要证明的结论设为 $\beta$，分类讨论的每种情况设为命题函数 $\gamma_i$．原先我们要证明的内容是：
+
+$$
+\alpha \implies \beta
+$$
+
+而我们的做法是：
+
+$$
+\begin{aligned}
+\alpha \land \gamma_1 & \implies \beta_1 \\
+\alpha \land \gamma_2 & \implies \beta_2 \\
+\cdots & \implies \cdots \\
+\alpha \land \gamma_k & \implies \beta_k \\
+\beta_1 \lor \beta_2 \lor \cdots \lor \beta_k &\implies \beta
+\end{aligned}
+$$
+
+这种操作的正确性基于：
+
+$$
+\begin{aligned}
+& \alpha \to \beta \\
+\iff & \alpha \land \mathrm T \to \beta \\
+\iff & \alpha \land (\gamma_1 \lor \gamma_2 \lor \cdots \lor \gamma_k) \to \beta \\
+\iff & (\alpha \land \gamma_1) \lor (\alpha \land \gamma_2) \lor \cdots \lor (\alpha \land \gamma_k) \to \beta \\
+\impliedby & \beta_1 \lor \beta_2 \lor \cdots \lor \beta_k \to \beta
+\end{aligned}
+$$
+
+因此原问题弱于 $\beta_1 \lor \beta_2 \lor \cdots \lor \beta_k \implies \beta$，证得后者则前者自动成立，证明无误．
+
+有几点需要注意：
+
+- 必须保证 $(\gamma_1 \lor \gamma_2 \lor \cdots \lor \gamma_k) \iff \mathrm T$，也就是说这 $k$ 种情况必须包含了所有可能情况，不能有遗漏．否则正确性推理的第二步 $\iff$ 退化为 $\implies$，后面的讨论就没意义了（因为已经强化问题了）．$k$ 种情况互相可以重叠．
+- 注意最后的 $\beta_1$ 到 $\beta_k$ 应该或起来．
