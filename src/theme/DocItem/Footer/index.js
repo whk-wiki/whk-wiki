@@ -6,7 +6,7 @@ export default function FooterWrapper(props) {
   return (
     <>
       <Footer {...props} />
-	  <GiscusComponent />
+	  {/* <GiscusComponent /> */}
     </>
   );
 }

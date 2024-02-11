@@ -103,3 +103,11 @@ table {
     margin-left: auto;
     margin-right: auto;
 }
+
+.katex {
+	font-size: 1.25em;
+}
+
+.thin-scrollbar {
+    scrollbar-width: none;
+}

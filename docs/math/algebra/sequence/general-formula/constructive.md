@@ -1,0 +1,728 @@
+---
+sidebar_position: 2
+description: 了解多种数列的求通项构造法．
+---
+
+# 构造法求通项
+
+**标题带星号的类型比较复杂，高考考察频率较低，选择性掌握即可**．
+
+## 不动点法及其派生类
+
+### 类型一 - $a_{n + 1} = pa_n + q$
+
+> 已知 $a_{n + 1} = pa_n + q$，求 $a_n$ 的通项．$p \ne 0$．
+
+首先，**如果 $\* p = 1$**，则 $a$ 为 **等差数列**，可以直接做，而不能套用下面的方法！
+
+若 $p \ne 1$，以下步骤可以求出 $a$ 的通项：
+
+- 将递推关系刻画为函数（$f(a_n) = a_{n + 1}$），此处即 $f(x) = px + q$．
+- 求 $f$ 的 **不动点**（即满足 $f(x_0) = x_0$ 的 $x_0$），有 $x_0 = \dfrac{q}{1 - p}$（这一步要求 $\* p \ne 1$）．
+- 换元 $\* b_n = a_n - x_0$．
+- 可以证明，$b$ 是一个 **公比为 $p$** 的 **等比数列**．操作是 **将递推式两边减去 $x_0$**：
+
+$$
+\begin{aligned}
+a_{n + 1} - \dfrac{q}{1 - p} &= pa_n + q - \dfrac{q}{1 - p} \\
+b_{n + 1} &= pa_n + \dfrac{q - pq}{1 - p} - \dfrac{q}{1 - p} \\
+b_{n + 1} &= pa_n - \dfrac{pq}{1 - p} \\
+b_{n + 1} &= p\left(a_n - \dfrac{q}{1 - p}\right) \\
+b_{n + 1} &= pb_n
+\end{aligned}
+$$
+
+$b_n$ 是等比数列，$a_n$ 的通项就可求了．
+
+该方法的核心就是令 $b_n = a_n - x_0$，其中 $x_0$ 为不动点，所以该方法称作 **不动点法**．
+
+不动点法的正确性无可置疑，但看起来十分无迹可循：
+
+- 怎么想到 **不动点** 的？**不动点** 与数列通项的关系是巧合吗？
+- 怎么想到换元 $b_n$ 为 $a_n$ **减去不动点** 的？
+
+事实上，不动点法不只是用来解决 $a_{n + 1} = pa_n + q$ 这种问题的（虽然高中应试阶段可以这么认为），其有着更广泛的适用范围，背后也有更深刻的数学原理．对这种原理的严谨的说明需用到大学线性代数的知识，[下一页](./fixed_point.md)会给出一个高中生可以看懂的解释．但在此之前，请先用这个方法做题目吧．
+
+:::info 例题 1.1
+
+已知数列 $a$ 满足 $a_1 = 2$，$a_{n + 1} = 3a_n + 1$，求 $a_n$．
+
+:::
+
+:::tip 例题 1.1 解答（思考过程）
+
+$$
+x = 3x + 1 \implies x_0 = -\dfrac 1 2
+$$
+
+递推公式两边减 $x_0$，推理即可．
+
+:::
+
+:::tip 例题 1.1 解答（写在卷子上的过程）
+
+注意到 $a_{n + 1} + \dfrac 1 2 = 3a_n + 1 + \dfrac 1 2 = 3\left(a_n + \dfrac 1 2\right)$，$a_1 + \dfrac 1 2 = \dfrac 5 2$，
+
+因此 $\left\{a_n + \dfrac 1 2\right\}$ 是首项为 $\dfrac 5 2$，公比为 $3$ 的等比数列．
+
+因此 $a_n + \dfrac 1 2 = \dfrac 5 2 \cdot 3^{n - 1}$，$a_n = \dfrac 5 2 \cdot 3^{n - 1} - \dfrac 1 2$．
+
+:::
+
+### 类型二 - $a_{n + 1} = \dfrac{sa_n}{pa_n + q}$
+
+> 已知 $a_{n + 1} = \dfrac{sa_n}{pa_n + q}$，求 $a_n$ 的通项．$s$，$p$，$q$，$a_1$ 均 **非零**．
+
+注意到 $a_1 \ne 0 \implies a_n \ne 0$，对递推式两侧取倒数得
+
+$$
+\dfrac 1 {a_{n + 1}} = \dfrac{pa_n + q}{sa_n} = \dfrac p s + \dfrac q {sa_n}
+$$
+
+换元 $b_n = \dfrac 1 {a_n}$：
+
+$$
+b_{n + 1} = \dfrac p s + \dfrac q s b_n
+$$
+
+这就是类型一了，当 $\dfrac q s = 1$ 直接 **等差数列**，否则 **不动点法**．
+
+:::info 例题 1.2.1
+
+已知 $a_1 = -\dfrac 1 9$，$a_{n + 1} = \dfrac{a_n}{8a_n + 1}$，求 $a_n$．
+
+:::
+
+:::tip 例题 1.2.1 解答
+
+递推式两侧取倒数：
+
+$$
+\dfrac 1 {a_{n + 1}} = \dfrac{8a_n + 1}{a_n} = \dfrac 1 {a_n} + 8
+$$
+
+而 $\dfrac 1 {a_1} = -9$，可知 $\left\{\dfrac 1 {a_n}\right\}$ 为首项 $-9$，公差 $8$ 的等差数列．
+
+因此 $\dfrac 1 {a_n} = 8n - 17$，$a_n = \dfrac 1 {8n - 17}$．
+
+:::
+
+:::info 例题 1.2.2
+
+已知 $a_1 = -\dfrac 1 9$，$a_{n + 1} = \dfrac{a_n}{a_n + 2}$，求 $a_n$．
+
+:::
+
+:::tip 例题 1.2.2 解答
+
+递推式两侧取倒数：
+
+$$
+\dfrac 1 {a_{n + 1}} = \dfrac{a_n + 2}{a_n} = \dfrac 2 {a_n} + 1
+$$
+
+换元 $b_n = \dfrac 1 {a_n}$，可知 $b_{n + 1} = 2b_n + 1$．
+
+由于 $b_{n + 1} + 1 = 2b_n + 1 + 1 = 2(b_n + 1)$，而 $b_1 + 1 = \dfrac 1 {a_n} + 1 = -8 \ne 0$，公比 $2 \ne 0$，
+
+可知 $\{b_n + 1\}$ 为首项 $-8$，公比 $2$ 的等比数列．
+
+因此 $b_n + 1 = -8 \cdot 2^{n - 1} = -2^{n + 2}$，$b_n = -2^{n + 2} - 1$，$a_n = -\dfrac 1 {2^{n + 2} + 1}$．
+
+:::
+
+### 类型三 - $a_{n + 1} = pa_n + c \cdot q^n$
+
+要求：$p$，$q$ 非零．
+
+**两侧同时除以 $q^{n + 1}$**．
+
+$$
+\dfrac{a_{n + 1}}{q^{n + 1}} = \dfrac p q \cdot \dfrac{a_n}{q^n} + \dfrac c q
+$$
+
+令 $b_n = \dfrac{a_n}{q^n}$，则
+
+$$
+b_{n + 1} = \dfrac p q \cdot b_n + \dfrac c q
+$$
+
+显然 **等差数列**（$p = q$）或 **不动点法**（$p \ne q$）可做．
+
+:::info 例题 1.3
+
+$a_{n + 1} = 2a_n + 3^n$，$a_1 = 1$，求 $a_n$．
+
+:::
+
+:::tip 例题 1.3 解答
+
+注意到 $\dfrac{a_{n + 1}}{3^{n + 1}} = \dfrac 2 3 \cdot \dfrac{a_n}{3^n} + \dfrac 1 3$，令 $b_n = \dfrac{a_n}{3^n}$，则 $b_{n + 1} = \dfrac 2 3 b_n + \dfrac 1 3$．
+
+注意到 $b_{n + 1} - 1 = \dfrac 2 3 b_n + \dfrac 1 3 - 1 = \dfrac 2 3(b_n - 1)$，而 $b_1 - 1 = \dfrac{a_1} 3 - 1 = -\dfrac 2 3 \ne 0$，公比 $\dfrac 2 3 \ne 0$，
+
+因此 $b$ 为首项 $-\dfrac 2 3$，公比 $\dfrac 2 3$ 的等比数列，有 $b_n - 1 = -\dfrac 2 3 \cdot \left(\dfrac 2 3\right)^{n - 1} = -\dfrac{2^n}{3^n}$．
+
+因此 $b_n = 1 - \dfrac{2^n}{3^n}$，$a_n = 3^n - 2^n$．
+
+:::
+
+### 类型四 - $a_{n + 1} = p \cdot {a_n}^r$
+
+要求：$p > 0$，$a_1 > 0$（可推得 $a_n > 0$）．
+
+两边同时取对数得
+
+$$
+\lg{a_{n + 1}} = r \cdot {\lg a_n} + \lg p
+$$
+
+换元 $b_n = \lg{a_n}$：
+
+$$
+b_{n + 1} = r \cdot b_n + \lg p
+$$
+
+$r = 1$ 的情况为 **平凡等差**（直接看原递推式则是 **平凡等比**）；$r \ne 1$ **不动点法** 解决．
+
+:::info 例题 1.4
+
+已知 $a_1 = 1$，$a_{n + 1} = 2{a_n}^2$，求 $a_n$．
+
+:::
+
+:::tip 例题 1.4 解答
+
+显然 $a_n > 0$．
+
+两侧取对数得 $\lg a_{n + 1} = 2\lg a_n + \lg 2$，令 $b_n = \lg a_n$，可知 $b_{n + 1} = 2b_n + \lg 2$．
+
+因此 $b_{n + 1} + \lg 2 = 2(b_n + \lg 2)$，而 $b_1 = \lg a_1 = \lg 2$，
+
+可知 $\{b_n + \lg 2\}$ 为首项 $\lg 2$，公比 $2$ 的等比数列，$b_n + \lg 2 = 2^{n - 1} \cdot \lg 2 = \lg 2^{2^{n - 1}}$．
+
+因此 $b_n = \lg\left(2^{2^{n - 1}}\right) - \lg 2 = \lg 2^{2^{n - 1} - 1}$，$\lg a_n = b_n$，因此 $a_n = 2^{2^{n - 1} - 1}$．
+
+:::
+
+### 类型五 - $a_na_{n + 1} = qa_n - pa_{n + 1}$
+
+要求：$p \ne 0$，$q \ne 0$，$a_1 \ne 0$（可推出 $a_n \ne 0$）．
+
+等式两侧同时除以 $a_na_{n + 1}$：
+
+$$
+1 = \dfrac q {a_{n + 1}} - \dfrac p {a_n} \iff \dfrac q {a_{n + 1}} = \dfrac p {a_n} + 1 \iff \dfrac{1}{a_{n + 1}} =\dfrac p q \cdot \dfrac 1 {a_n} + \dfrac 1 q
+$$
+
+令 $b_n = \dfrac 1 {a_n}$：
+
+$$
+b_{n + 1} = \dfrac p q b_n + \dfrac 1 q
+$$
+
+$b$ 可 **等差数列**（$p = q$）或 **不动点法**（$p \ne q$）．
+
+### 类型六 - $a_{n + 1} = A{a_n}^2 + Ba_n + C$
+
+要求：$A$，$B$，$C$ 均为常数；$A \ne 0$；$\* \Delta = 2B$．
+
+$$
+\begin{aligned}
+Aa_{n + 1} &= A^2{a_n}^2 + ABa_n + AC \\
+Aa_{n + 1} &= \left(A^2{a_n}^2 + ABa_n + \dfrac{B^2}4\right) + AC - \dfrac{B^2}4 \\
+Aa_{n + 1} &= \left(A{a_n} + \dfrac B 2\right)^2 - \dfrac 1 4 \Delta \\
+Aa_{n + 1} + \dfrac B 2 &= \left(A{a_n} + \dfrac B 2\right)^2 \textcolor{red}{- \dfrac 1 4 \Delta + \dfrac B 2}
+\end{aligned}
+$$
+
+由于 $\Delta = 2B$，上面标红的一项为 $0$．因此，设 $b_n = Aa_n + \dfrac B 2$，则 $b_n = {b_{n - 1}}^2$．
+
+读者可能可以一眼看出 $b_n = {b_1}^{2^{n - 1}}$，不过卷子上，需要按照类型四的取对数策略严格说明．
+
+:::info 例题 1.6
+
+已知 $a_1 = 2$，$a_{n + 1} = 3{a_n}^2 - 4a_n + 2$，求 $a_n$．
+
+:::
+
+:::tip 例题 1.6 解答（思考过程）
+
+$\Delta = 4^2 - 4 \times 3 \times 2 = -8 = 2B$，符合模型．
+
+:::
+
+:::tip 例题 1.6 解答（写在卷子上的过程）
+
+递推式变形得
+
+$$
+\begin{aligned}
+3a_{n + 1} &= (9{a_n}^2 - 12a_n) + 6 \\
+3a_{n + 1} &= (9{a_n}^2 - 12a_n + 4) + 2 \\
+3a_{n + 1} - 2 &= (3a_n - 2)^2
+\end{aligned}
+$$
+
+令 $b_n = 3a_n - 2$，则 $b_{n + 1} = {b_n}^2$，且 $b_1 = 3a_1 - 2 = 4 > 0$，显然 $b_n > 0$，
+
+取对数得 $\lg b_{n + 1} = 2 \lg b_n$，而 $\lg b_1 = \lg 4$，因此 $\{\lg b_n\}$ 是一个首项为 $\lg 4$，公比为 $2$ 的等比数列，
+
+有 $\lg b_n = 2^{n - 1} \cdot \lg 4 = \lg 4^{2^{n - 1}} = \lg 2^{2^n}$，即 $b_n = 2^{2^n}$，
+
+所以 $a_n = \dfrac{b_n + 2}3 = \dfrac 1 3\left(2^{2^n} + 2\right)$．
+
+:::
+
+
+### *类型七 - $a_{n + 1} = \dfrac{pa_n + q}{sa_n + t}$
+
+这又是另一类经典不动点问题，下面给出思路．
+
+- 将递推关系刻画为函数 $f(x) = \dfrac{px + q}{sx + t}$．
+- 求 $f$ 的不动点，即 $x = \dfrac{px + q}{sx + t} \iff sx^2 + (t - p)x - q = 0$ 的解，为二次方程．
+	- 若 $f$ 不动点不存在，无法用不动点法求出数列通项．这类数列可能作为短周期数列在题中出现，此时应该用周期思想分析，如 $a_1 = \dfrac 1 2$，$a_{n + 1} = \dfrac{a_n + 1}{1 - a_n}$．
+	- 若 $f$ 恰存在一个不动点 $x_0$，换元 $b_n = \* \dfrac 1 {a_n - x_0}$，$b$ 会是一个等差数列．
+	- 若 $f$ 存在两个不动点 $x_1$，$x_2$，换元 $b_n = \* \dfrac{a_n - x_1}{a_n - x_2}$，$b$ 会是一个等比数列．
+
+这类题在高考中已将近绝迹，不给出证明与例题，了解即可．
+
+## 其它类
+
+### 类型一 - $a_{n + 1} = pa_n + Xn + Y$
+
+要求：$\* p \not\in \{0, 1\}$（$p = 1$ 时移项 $a_{n + 1} - a_n = Xn + Y$，累加法求通项）．
+
+设 $a_{n + 1} + x(n + 1) + y = p(a_n + xn + y)$ 对任意 $n \in \N^\ast$ 恒成立，则 $\{a_n + xn + y\}$ 为公比 $p$ 的等比数列．
+
+那么现在的问题就是：这样的 $x$，$y$ 真的存在吗？它们应该是多少？
+
+用递推式替换上式的 $a_{n + 1}$：
+
+$$
+\cancel{pa_n} + Xn + Y + x(n + 1) + y = \cancel{pa_n} + pxn + py
+$$
+
+将其整理为 $n$ 的方程：
+
+$$
+(X + x - px)n + Y + x + y - py = 0
+$$
+
+该方程要对任意 $n \in \N^\ast$ 恒成立，就必有
+
+$$
+\begin{cases}
+X + x - px = 0 \\
+Y + x + y - py = 0
+\end{cases}
+$$
+
+解出 $x$，$y$ 即可．
+
+:::info 例题 2.1.1
+
+$a_1 = 1$，$a_{n + 1} = 2a_n + n + 1$，求 $a_n$．
+
+:::
+
+:::tip 例题 2.1.1 解答（思考过程）
+
+待定系数：
+
+$$
+a_{n + 1} + x(n + 1) + y = 2(a_n + xn + y)
+$$
+
+将 $a_{n + 1}$ 用递推式展开，打开括号：
+
+$$
+2a_n + n + 1 + xn + x + y = 2a_n + 2xn + 2y
+$$
+
+整理得
+
+$$
+(x - 1)n + y - x - 1 = 0
+$$
+
+方程恒成立，解得 $x = 1$，$y = 2$．
+
+因此，递推式两边加 $x(n + 1) + y = (n + 1) + 2$，证明 $\{a_n + n + 2\}$ 是等比数列即可．
+
+:::
+
+:::tip 例题 2.1.1 解答（写在卷子上的过程）
+
+注意到 $a_{n + 1} + (n + 1) + 2 = 2a_n + n + 1 + (n + 1) + 2 = 2(a_n + n + 2)$，而 $a_1 + 1 + 2 = 4 \ne 0$，公比 $2 \ne 0$，
+
+因此 $\{a_n + n + 2\}$ 为首项 $4$，公比为 $2$ 的等比数列，通项 $a_n + n + 2 = 4 \cdot 2^{n - 1} = 2^{n + 1}$．
+
+因此 $a_n = 2^{n + 1} - n - 2$．
+
+:::
+
+:::info 例题 2.1.2
+
+已知 $a_1 = 7$，$a_{n + 1} = 2 \times 3^n \times {a_n}^5$，求 $a_n$．
+
+:::
+
+:::tip 例题 2.1.2 解答
+
+$a_1 > 0$，根据 $a$ 的通项公式显然 $a_n > 0$，
+
+取对数得 $\lg a_{n + 1} = 5 \lg a_n + n \lg 3 + \lg 2$，换元 $b_n = \lg a_n$ 即转化为该类型．
+
+这个题计算比较复杂，读者可以尝试自行挑战一下，笔者将答案放在这里（善用网页放大功能）：
+
+$$
+a_n = 2^{\frac{5^{n - 1} - 1}4} \times 3^{\frac{5^n - 4n - 1}{16}} \times 7^{5^{n - 1}}
+$$
+
+:::
+
+### 类型二 - 隔项等比等差数列
+
+$$
+a_n + a_{n + 1} = pn + q
+$$
+
+满足如上递推式的数列 $a$ 为 **隔项等差数列**，原因如下：
+
+将递推式向后偏移一项得 $a_{n + 1} + a_{n + 2} = pn + p + q$，两式作差得 $a_{n + 2} - a_n = p$．
+
+因此，$\{a_{2n - 1}\}$，$\{a_{2n}\}$ 分别构成 **公差为 $p$** 的等差数列．
+
+同理，
+
+$$
+a_n \cdot a_{n + 1} = p \cdot q^n
+$$
+
+为 **隔项等比数列**，且奇项，偶项公比均为 $q$．
+
+### *类型三 - $a_{n + 2} = pa_n + qa_{n + 1}$
+
+$p$ 与 $q$ 为 **非零常数**．
+
+设 $\* \{a_{n + 1} - \alpha a_n\}$ 为公比为 $\* \beta$ 的等比数列，即
+
+$$
+a_{n + 2} - \alpha a_{n + 1} = \beta(a_{n + 1} - \alpha a_n)
+$$
+
+对任意 $n \in \N^\ast$ 恒成立．
+
+将该式移项可得
+
+$$
+a_{n + 2} = (\alpha + \beta)a_{n + 1} - \alpha\beta a_n
+$$
+
+递推式代入等号左侧可得
+
+$$
+pa_n + qa_{n + 1} = (\alpha + \beta)a_{n + 1} - \alpha\beta a_n
+$$
+
+该方程要对任意 $n \in \N^\ast$ 恒成立，且 $a$ 不是常数列（小细节，可以自己想想为什么），需使得
+
+$$
+\begin{cases}
+p = -\alpha\beta \\
+q = \alpha + \beta
+\end{cases}
+$$
+
+根据韦达定理，这等价于 $\alpha$ 与 $\beta$ 为方程 $\* x^2 - px - q = 0$ 的两根．称该方程为数列的 **特征方程**．特征方程这个名词看起来很高级，其实意思就是「为了解决问题而引入的方程」，所以不必想多．
+
+考察 $x^2 - px - q = 0$ 的两根 $\alpha$，$\beta$（这里只讨论 **方程有实数根** 的情形）．
+
+> 小细节：这里解出的 $\alpha$ 与 $\beta$ 一定非零，否则与 $-\alpha\beta = p \ne 0$ 矛盾．
+
+#### 方程有两不等实根（$\alpha \ne \beta$）
+
+$\{a_{n + 1} - \alpha a_n\}$ 为公比为 $\beta$ 的等比数列，有
+
+$$
+a_{n + 1} - \alpha a_n = (a_2 - \alpha a_1) \cdot \beta^{n - 1}
+$$
+
+同理，$\{a_{n + 1} - \beta a_n\}$ 为公比为 $\alpha$ 的等比数列，有
+
+$$
+a_{n + 1} - \beta a_n = (a_2 - \beta a_1) \cdot \alpha^{n - 1}
+$$
+
+下式减去上式，可得
+
+$$
+(\alpha - \beta)a_n = (a_2 - \beta a_1) \cdot \alpha^{n - 1} - (a_2 - \alpha a_1) \cdot \beta^{n - 1}
+$$
+
+即
+
+$$
+a_n = \dfrac{a_2 - \beta a_1}{\alpha - \beta} \cdot \alpha^{n - 1} + \dfrac{\alpha a_1 - a_2}{\alpha - \beta} \cdot \beta^{n - 1}
+$$
+
+上面这个形式可以简记作
+
+$$
+a_n = A \cdot \alpha^{n - 1} + B \cdot \beta^{n - 1}
+$$
+
+即此时的 $a$ 可以表示为 **两个等比数列的和**．
+
+#### 方程有两相等实根（$\alpha = \beta$）
+
+可知
+
+$$
+a_{n + 1} - \alpha a_n = (a_2 - \alpha a_1) \cdot \alpha^{n - 1}
+$$
+
+两侧同时除以 $\alpha^{n + 1}$ 得
+
+$$
+\dfrac{a_{n + 1}}{\alpha^{n + 1}} - \dfrac{a_n}{\alpha^n} = \dfrac{a_2 - \alpha a_1}{\alpha^2}
+$$
+
+因此 $\left\{\dfrac{a_n}{\alpha^n}\right\}$ 为首项为 $\dfrac{a_1}\alpha$，公差为 $\dfrac{a_2 - \alpha a_1}{\alpha^2}$ 的等差数列．
+
+于是
+
+$$
+\dfrac{a_n}{\alpha^n} = \dfrac{a_1}\alpha + (n - 1)\dfrac{a_2 - \alpha a_1}{\alpha^2} = \dfrac{a_2 - \alpha a_1}{\alpha^2} \cdot n + \dfrac{2\alpha a_1 - a_2}{\alpha^2}
+$$
+
+$$
+a_n = \left(\dfrac{a_2 - \alpha a_1}{\alpha^2} \cdot n + \dfrac{2\alpha a_1 - a_2}{\alpha^2}\right) \cdot \alpha^n
+$$
+
+上面这个形式可以简记作
+
+$$
+a_n = (An + B) \cdot \alpha^n
+$$
+
+即此时的 $a$ 可以表达为一个 **等差乘等比** 数列．
+
+:::info 例题 2.3.1
+
+已知 $a_1 = 1$，$a_2 = 1$，$a_{n + 2} = a_n + a_{n + 1}$，求 $a_n$．
+
+> 事实上，这个数列 $a$ 称作 **斐波那契数列**．
+
+:::
+
+提示：为了方便计算，$\alpha$ 与 $\beta$ 最后再代入比较合适．
+
+:::tip 例题 2.3.1 解答（写在卷子上的过程）
+
+设 $a_{n + 2} - \alpha a_{n + 1} = \beta(a_{n + 1} - \alpha a_n)$ 对任意 $n \in \N^\ast$ 恒成立，
+
+移项得
+
+$$
+a_{n + 2} = (\alpha + \beta)a_{n + 1} - \alpha\beta a_n
+$$
+
+代入 $a_{n + 2} = a_{n + 1} + a_n$ 得
+
+$$
+a_{n + 1} + a_n = (\alpha + \beta)a_{n + 1} - \alpha\beta a_n
+$$
+
+要使其对任意 $n \in \N^\ast$ 恒成立，且 $a$ 非常数列，需有
+
+$$
+\begin{cases}
+\alpha + \beta = 1 \\
+-\alpha\beta = 1
+\end{cases}
+$$
+
+因此 $\alpha$，$\beta$ 为 $x^2 - x - 1$ 的两根，具有对称性．
+
+$a_{n + 1} - \alpha a_n$ 是以 $a_2 - \alpha a_1 = 1 - \alpha = \beta$ 为首项，$\beta$ 为公比的等比数列．
+
+因此 $a_{n + 1} - \alpha a_n = \beta^n$．
+
+由 $\alpha$ 与 $\beta$ 的对称性知 $a_{n + 1} - \beta a_n = \alpha^n$．
+
+两式相减得 $(\alpha - \beta)a_n = \alpha^n - \beta^n$．
+
+由 $\alpha$，$\beta$ 为 $x^2 - x - 1$ 的两根，取 $\alpha = \dfrac{1 + \sqrt 5}2$，$\beta = \dfrac{1 - \sqrt 5}2$，
+
+代入上式即得
+
+$$
+a_n = \dfrac{\sqrt 5}5 \left[\left(\dfrac{1 + \sqrt 5}2\right)^n - \left(\dfrac{1 - \sqrt 5}2\right)^n\right]
+$$
+
+:::
+
+:::info 例题 2.3.2
+
+已知数列 $a$ 满足 $a_1 = 1$，$a_2 = 4$，$3a_{n + 2} = 5a_{n + 1} - 2a_n$，求 $a_n$．
+
+:::
+
+建议自己在草稿纸上以阅卷要求写一遍步骤，然后和下面对照．
+
+:::tip 例题 2.3.2 解答
+
+设 $a_{n + 2} - \alpha a_{n + 1} = \beta(a_{n + 1} - \alpha a_n)$ 对任意 $n \in \N^\ast$ 恒成立，
+
+则 $a_{n + 2} = (\alpha + \beta)a_{n + 1} - \alpha\beta a_n$．
+
+将 $3a_{n + 2} = 5a_{n + 1} - 2a_n$ 代入上式得 $5a_{n + 1} - 2a_n = 3(\alpha + \beta)a_{n + 1} - 3\alpha\beta a_n$，
+
+要使得其对任意 $n \in \N^\ast$，且 $a$ 非常数列，
+
+可知 $\alpha + \beta = \dfrac 5 3$，$\alpha\beta = \dfrac 2 3$．
+
+由韦达定理知 $\alpha$，$\beta$ 为 $3x^2 - 5x + 2 = 0$ 的两根，具有对称性．
+
+上述推理可知 $\{a_{n + 1} - \alpha a_n\}$ 是以 $a_2 - \alpha a_1 = 4 - \alpha$ 为首项，$\beta$ 为公比的等比数列，
+
+因此
+
+$$
+a_{n + 1} - \alpha a_n = (4 - \alpha) \cdot \beta^{n - 1}
+$$
+
+对称性可知
+
+$$
+a_{n + 1} - \beta a_n = (4 - \beta) \cdot \alpha^{n - 1}
+$$
+
+下式减上式得
+
+$$
+(\alpha - \beta)a_n = (4 - \beta) \cdot \alpha^{n - 1} - (4 - \alpha) \cdot \beta^{n - 1}
+$$
+
+$\alpha$，$\beta$ 为 $3x^2 - 5x + 2 = 0$ 的两根，即 $(x - 1)(3x - 2) = 0$ 的两根，不妨取 $\alpha = 1$，$\beta = \dfrac 2 3$．
+
+代入上式得
+
+$$
+\dfrac 1 3 a_n = \left(4 - \dfrac 2 3\right) - (4 - 1) \cdot \left(\dfrac 2 3 \right)^{n - 1}
+$$
+
+整理化简得
+
+$$
+a_n = 10 - 9 \cdot \left(\dfrac 2 3\right)^{n - 1}
+$$
+
+:::
+
+### *类型四 - $a_{n + 2} = pa_n + qa_{n + 1} + c$
+
+$p$，$q$，$c$ 非零．
+
+令 $b_n = a_{n + 1} - a_n$，则 $b_n$ 的通项符合 **类型三** 形式（常数 $c$ 通过相减消去），$b$ 通项可解．
+
+然后对 $b$ 进行累加法，由于 $b$ 的形式要么是 **两个等比数列的和**，要么是 **一个等差乘等比数列**，累加一定可以成功．
+
+### *类型五 - 三角换元
+
+**提示：下面的题做不出来不用担心，高考数列一般不会考这么难．当做拓宽思维即可**．
+
+:::info 例题 2.5.1
+
+已知数列 $a$ 满足 $a_n = 2{a_{n - 1}}^2 - 1$，$|a_1| < 1$，用含 $a_1$ 的式子表达 $a$ 的通项．
+
+:::
+
+:::tip 例题 2.5.1 解答
+
+令 $a_n = \cos b_n$，则 $\cos b_n = 2{\cos b_{n - 1}}^2 - 1 = \cos {2b_{n - 1}}$．
+
+容易发现，$b_1 = \arccos a_1$，$b_n = 2b_{n - 1}$ 满足所有条件．此时 $b_n = 2^{n - 1} \arccos a_1$．
+
+因此，$a_n = \cos b_n = \cos(2^{n - 1} \arccos a_1)$．
+
+:::
+
+这个题不能直接设 $b_n = \arccos a_n$，因为要想构造出等比数列，$b_n$ 的范围并不局限在 $[0, \pi]$．
+
+:::info 例题 2.5.2
+
+已知数列 $a$ 满足 $a_{n + 1} = 2a_n\sqrt{1 - {a_n}^2}$，$a_1 \in (0, 1)$，用含 $a_1$ 的式子表达 $a$ 的通项．
+
+:::
+
+:::tip 例题 2.5.2 解答
+
+令 $a_n = \left |\sin b_n \right|$，则 $\left|\sin b_{n + 1}\right| = 2\left|\sin b_n\right| \cdot \left|\cos b_n\right| = \left|2 \sin b_n \cos b_n\right| = \left|\sin 2 b_n\right|$．
+
+不难看出 $b_1 = \arcsin a_1$，$b_n = 2b_{n - 1}$ 满足所有条件，$b_n = 2^{n - 1} \arcsin a_1$．
+
+因此 $a_n = \left|\sin b_n\right| = \left|\sin(2^{n - 1} \arcsin a_1\right)|$．
+
+:::
+
+:::info 例题 2.5.3
+
+已知数列 $a$ 满足 $a_{n + 1} = \sqrt{a_n + 2}$，用含 $a_1$ 的式子表达 $a$ 的通项．
+
+:::
+
+绝对有竞赛难度的题了，普通选手欣赏解法即可．
+
+:::tip 例题 2.5.3 解答
+
+若 $|a_1| \le 2$，令 $a_n = 2 \cos b_n$，有
+
+$$
+2 \cos b_{n + 1} = \sqrt{2\cos b_n + 2} = 2 \sqrt{\dfrac{\cos b_n + 1} 2} = 2 \cos \dfrac{b_n} 2
+$$
+
+注意到 $b_1 = \arccos \dfrac {a_1} 2$，$b_n = \dfrac 1 2 b_{n - 1}$ 满足全部条件，因此令 $b_n = \dfrac 1 {2^{n - 1}} \arccos \dfrac {a_1} 2$，于是
+
+$$
+a_n = 2 \cos \left(\dfrac 1 {2^{n - 1}} \arccos \dfrac {a_1} 2\right)
+$$
+
+若 $a_1 > 2$，令 $a_n = b_n + \dfrac 1 {b_n}$（显然 $b_n > 0$），有
+
+$$
+b_{n + 1} + \dfrac 1 {b_{n + 1}} = \sqrt{b_n + \dfrac 1 {b_n} + 2} = \sqrt{\left(\sqrt{b_n} + \dfrac 1 {\sqrt{b_n}} \right)^2} = \sqrt{b_n} + \dfrac 1 {\sqrt{b_n}}
+$$
+
+将 $a_n = b_n + \dfrac 1 {b_n}$ 视作 $a_n$ 为参数，$b_n$ 为未知元的方程，解得
+
+$$
+b_n = \dfrac{a_1 \pm \sqrt{{a_1}^2 - 4}} 2
+$$
+
+两个解互为倒数（从方程 $a_n = b_n + \dfrac 1 {b_n}$ 不难看出）．
+
+可知 $b_1 = \dfrac{a_1 + \sqrt{{a_1}^2 - 4}} 2$，$b_{n + 1} = \sqrt {b_n}$ 满足全部要求，此时
+
+$$
+b_n = \left(\dfrac{a_1 + \sqrt{{a_1}^2 - 4}} 2\right)^{\frac 1 {2^{n - 1}}}
+$$
+
+于是
+
+$$
+a_n = \left(\dfrac{a_1 + \sqrt{{a_1}^2 - 4}} 2\right)^{\frac 1 {2^{n - 1}}} + \left(\dfrac{a_1 - \sqrt{{a_1}^2 - 4}} 2\right)^{\frac 1 {2^{n - 1}}}
+$$
+
+综合两种情况：
+
+$$
+a_n = \begin{cases}
+2 \cos \left(\dfrac 1 {2^{n - 1}} \arccos \dfrac {a_1} 2\right), & -2 \le a_1 \le 2 \\
+\left(\dfrac{a_1 + \sqrt{{a_1}^2 - 4}} 2\right)^{\frac 1 {2^{n - 1}}} + \left(\dfrac{a_1 - \sqrt{{a_1}^2 - 4}} 2\right)^{\frac 1 {2^{n - 1}}}, & a_1 > 2
+\end{cases}
+$$
+
+:::

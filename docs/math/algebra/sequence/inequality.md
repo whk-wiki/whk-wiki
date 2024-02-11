@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 description: 了解数列中的不等式问题的做题技巧．
 ---
 

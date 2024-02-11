@@ -16,9 +16,15 @@ export default {
 		},
 		{
 			type: 'doc',
-			docId: 'home/math',
+			docId: 'home/algebra',
 			position: 'left',
-			label: '数学',
+			label: '数学（代数）',
+		},
+		{
+			type: 'doc',
+			docId: 'home/geometry',
+			position: 'left',
+			label: '数学（几何）',
 		},
 		{
 			type: 'doc',
