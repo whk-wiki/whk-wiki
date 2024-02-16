@@ -194,15 +194,15 @@ $$
 
 $$
 \begin{aligned}
-S_n &= \df{c_1}{p_1q_1} + \df{c_2}{p_2q_2} + \cdots + \df{c_n}{p_nq_n} \\
+S_n &= \df{c_1}{p_1q_1} + \df{c_2}{p_2q_2} + \cdots + \df{c_n}{p_nq_n} \\[1em]
 &=
 \df{c_1}{q_1 - p_1}(\df 1 {p_1} - \df 1 {q_1}) + \df{c_2}{q_2 - p_2}(\df 1 {p_2} - \df 1 {q_2}) + \cdots +
-\df{c_n}{q_n - p_n}(\df 1 {p_n} - \df 1 {q_n}) \\
-&= C(\df 1 {p_1} - \df 1 {q_1} + \df 1 {p_2} - \df 1 {q_2} + \cdots + \df 1 {p_n} - \df 1 {q_n}) \\
+\df{c_n}{q_n - p_n}(\df 1 {p_n} - \df 1 {q_n}) \\[1em]
+&= C(\df 1 {p_1} - \df 1 {q_1} + \df 1 {p_2} - \df 1 {q_2} + \cdots + \df 1 {p_n} - \df 1 {q_n}) \\[1em]
 &= C[
 (\df 1 {p_1} + \df 1 {p_2} + \cdots + \df 1 {p_n}) -
 (\df 1 {q_1} + \df 1 {q_2} + \cdots + \df 1 {q_n})
-] \\
+] \\[1em]
 &= C[
 (\df 1 {b_1} + \df 1 {b_2} + \cdots + \df 1 {b_n}) -
 (\df 1 {b_{k + 1}} + \df 1 {b_{k + 2}} + \cdots + \df 1 {b_{k + n}})
