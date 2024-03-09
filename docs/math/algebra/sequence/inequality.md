@@ -446,7 +446,7 @@ $$
 
 分母有根号，因此可以猜 $c_n = \df 1 {\sqrt n}$．$c_1 = 1 \ne C$，直接填一个系数，猜 $c_n = \df 2 {\sqrt n}$．
 
-然后尝试一下放缩是否成功．$a_n \le b_n < c_n - c_{n + 1}$，即
+然后尝试一下放缩是否成功．$a_n \le b_n = c_n - c_{n + 1}$，即
 
 $$
 \df 1 {\sqrt n(n+1)} \le \df 2 {\sqrt n} - \df 2 {\sqrt {n + 1}}
