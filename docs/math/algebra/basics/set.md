@@ -1,5 +1,5 @@
----
 sidebar_position: 1
+
 description: 了解集合．
 ---
 
@@ -57,7 +57,7 @@ $$
 - 自然数集（或非负整数集）：$\N=\{0,1,2,3,\dots\}$．
 - 正数集：$\N^\ast$ 或 $\N_+=\{1,2,3,\dots\}$．
 - 整数集：$\Z=\{\dots,-2,-1,0,1,2,\dots\}$．
-- 有理数集：$\mathbb Q=\left\{a\in\R\mid a=\dfrac qp,\;p,q\in\Z,(p,q)=1,p>0\right\}$ （Q 来源于 quotient（商））．
+- 有理数集：$\mathbb Q=\left\{a\in\R\mid a=\df qp,\;p,q\in\Z,(p,q)=1,p>0\right\}$ （Q 来源于 quotient（商））．
 - 实数集：$\R$．
 - 复数集：$\mathbb C$．
 - 素数集：$\mathbb P=\{2,3,5,7,11,13,17,\dots\}$．
@@ -66,7 +66,7 @@ $$
 
 注：对于 $\N,\Z,\mathbb Q,\R$，右下角标可以用于表示对范围的限制，如 $\R_{\ge0}\coloneqq\{x\in\R\mid x\ge0\}$．（高中考试不要使用！）
 
-注：在印刷体中，一般使用粗体 $\mathbf N$ 或黑板粗体 $\N$ 表示数集，如高中数学人教版教材采用的就是正粗体 $\mathbf N$．在手写体中，一般应该使用黑板粗体．
+注：在印刷体中，一般使用粗体 $\mathbf N$ 或黑板粗体 $\N$ 表示数集，如人教版高中数学教材采用的就是正粗体 $\mathbf N$．在手写体中，一般应该使用黑板粗体．
 
 ### 图示法
 
@@ -75,6 +75,7 @@ $$
 ### 区间
 
 另一种表示 **一个范围内的所有实数构成的数集** 的方法是 **区间**．如：
+
 - $[a,b]=\{x\in\R\mid a\le x\le b\}$．
 - $[a,b)=\{x\in\R\mid a\le x<b\}$．
 - $(a,b]=\{x\in\R\mid a<x\le b\}$．
@@ -87,7 +88,7 @@ $$
 
 总之，我们用方括号表示包含端点，圆括号表示不包含端点．正、负无穷一般用圆括号．
 
-另外，用区间的并表示「或」，如 $(-\infty,1)\cup\left[\dfrac32,+\infty\right)=\left\{x\in\R\mid x<1\ 或\ x\ge\dfrac32\right\}$，$(-\infty,2)\cup(2,+\infty)=\{x\in\R\mid x\ne2\}$．
+另外，用区间的并表示「或」，如 $(-\infty,1)\cup\left[\df32,+\infty\right)=\left\{x\in\R\mid x<1\ 或\ x\ge\df32\right\}$，$(-\infty,2)\cup(2,+\infty)=\{x\in\R\mid x\ne2\}$．
 
 注：正无穷 $+\infty$ 中的正号 $+$ 有时可以省略．
 
@@ -170,14 +171,20 @@ $$
 性质如下：
 
 - $A\cup\left(\complement_UA\right)=U$．
+
 - $A\cap\left(\complement_UA\right)=\varnothing$．
+
 - $\complement_U\varnothing=U$．
+
 - $\complement_UU=\varnothing$．
+
 - $\complement_U\left(\complement_UA\right)=A$（对合律）．
+
 - 若 $A\subseteq B$，则 $\complement_UB\subseteq\complement_UA$（逆否命题）．
+
 - De Morgan 定律：
 
-    $\complement_U\left(A\cap B\right)=\left(\complement_UA\right)\cup\left(\complement_UB\right)$​．
+    $\complement_U\left(A\cap B\right)=\left(\complement_UA\right)\cup\left(\complement_UB\right)$．
 
     $\complement_U\left(A\cup B\right)=\left(\complement_UA\right)\cap\left(\complement_UB\right)$．
 
@@ -213,17 +220,17 @@ $$
 
 一般通过分类讨论解决．
 
-:::info 例 1
+:::info 例 1.1
 
-设 $a,b\in\R$，集合 $\{1,a+b,a\}=\left\{0,\dfrac ba,b\right\}$，求 $a^{2023}+b^{2024}$ 的值．
+设 $a,b\in\R$，集合 $\{1,a+b,a\}=\left\{0,\df ba,b\right\}$，求 $a^{2023}+b^{2024}$ 的值．
 
 :::
 
-:::tip 例 1 解答
+:::tip 例 1.1 解答
 
 首先 $a\ne0$，那么 $a+b=0$．
 
-若 $\dfrac ba=1$，则 $b=a$，那么 $a=b=2a=0$，不成立，舍去．
+若 $\df ba=1$，则 $b=a$，那么 $a=b=2a=0$，与题意矛盾，舍去．
 
 若 $b=1$，则 $a=-1$．因此左侧集合为 $\{1,0,-1\}$，右侧集合为 $\{0,-1,1\}$，成立．
 
@@ -235,7 +242,7 @@ $$
 
 这部分题目经常与函数的定义域、值域结合．$\{x\mid y=f(x)\}$ 表示函数 $f(x)$ 的定义域，$\{y\mid y=f(x)\}$ 表示函数 $f(x)$ 的值域，注意看清题干．
 
-:::info 例 2
+:::info 例 2.1
 
 已知集合 $A=\{y\mid y=2^{x-1},1\le x\le2\},B=\{x\mid y=\lg(2-x)\}$，则下列结论正确的是（　　）
 
@@ -246,25 +253,105 @@ $$
 
 :::
 
-:::tip 例 2 解答
+有关初等函数的性质，参见[初等函数](https://whk-wiki.github.io/whk-wiki/math/algebra/elementary-function)部分．
+
+:::tip 例 2.1 解答
 
 $A=[2^{1-1},2^{2-1}]=[1,2],B=\{x\mid 2-x>0\}=(-\infty,2)$．因此 C 选项正确．
 
 :::
 
-如果涉及抽象集合，大概率画出 Venn 图可以让信息变得更加直观．很多题目也会给出 Venn 图，求阴影部分的表达式．
+这部分题目也经常与解不等式相结合，例如，将区间的包含关系转化为端点之间的不等关系．
+
+:::info 例 2.2
+
+已知集合 $A=\{x\mid-1\le x\le4\}$，$C=\{x\mid 2m<x<m+1\}$．若 $\exists\,x\in C,x\in A$ 为假命题，求实数 $m$​ 的取值范围．
+
+:::
+
+注意不要忘了讨论 **集合 $C$ 为空集** 的情况．
+
+:::tip 例 2.2 解答
+
+$\exists\,x\in C,x\in A$ 为假命题，则 $\forall\,x\in C,x\notin A$ 为真命题，即 $C\cap A=\varnothing$．
+
+若 $C=\varnothing$，则 $2m\ge m+1$，解得 $m\ge-1$．
+
+若 $C\ne\varnothing$，则 $2m<m+1\le-1$ 或 $4\le2m<m+1$，解得 $m\le-2$​．
+
+综上，实数 $m$ 的取值范围是 $(-\infty,-2]\cup[-1,+\infty)$．
+
+:::
+
+如果涉及抽象集合，很可能画出 Venn 图可以让信息变得更加直观．很多题目也会给出 Venn 图，求阴影部分的表达式．
 
 ### 集合的新定义问题
 
-:::info 例 3
+:::info 例 3.1
 
 设 $P,Q$ 是两个集合，定义集合 $P\setminus Q=\{x\mid x\in  P, $ 且 $x\notin Q\}$，如果 $P=\{x\mid1<2^x<4\}$，$Q=\{y\mid y=2+\sin x,x\in\R\}$，请求出 $P\setminus Q$．
 
 :::
 
-:::tip 例 3 解答
+:::tip 例 3.1 解答
 
 $P=(0,2)$，$Q=[1,3]$．根据定义，$P\setminus Q$ 就是从 $P$ 中去掉 $P$ 和 $Q$ 共有的部分后剩余的集合，因此 $P\setminus Q=(0,1)$．
+
+:::
+
+:::info 例 3.2
+
+**（多选题）** 设集合 $X$ 是实数集 $\R$ 的子集，如果 $x_0\in\R$ 满足对任意的 $a>0$，都存在 $x\in X$，使得 $0<|x-x_0|<a$，则称 $x_0$ 为集合 $X$ 的聚点．则下列集合中是以 $0$​ 为聚点的有（　　）
+
+- A. $\{x\mid x\in\R,x\ne0\}$ 
+- B. $\{x\mid x\in\Z,x\ne0\}$ 
+- C. $\{x\mid x=\df1n,n\in\N^\ast\}$ 
+- D. $\{x\mid x=\df n{n+1},n\in\N^\ast\}$​ 
+
+:::
+
+这道题的思想常应用于证明集合的有界性，以及对极限的严谨定义．
+
+::: tip 例 3.2 解答
+
+题意翻译一下也就是说：如果集合 $X$ 中的元素能 **任意地接近** $x_0$，或者说与 $x_0$ 的 **距离任意地小**，那么 $x_0$ 为 $X$​ 的聚点．
+
+A 选项即为 $(-\infty,0)\cup(0,+\infty)$，其中的元素能任意地接近 $0$，因此 $0$ 是聚点．
+
+B 选项，由于集合中的点是离散的整数点，其中的元素不能任意地接近 $0$，因此 $0$ 不是聚点．
+
+C 选项，由于 $n$ 可以无限大，$1/n$ 可以无限接近 $0$，因此 $0$ 是聚点．
+
+D 选项，由于整数 $n\ge1$，$\df n{n+1}=1-\df1{n+1}\ge\df12$，则其不能无限接近 $0$，因此 $0$​ 不是聚点．
+
+> 严谨证明：
+>
+> 对于 A，对任意的 $a$，集合中有 $x=\df a2$ 使得 $|x-0|=\df a2<a$，满足定义．
+>
+> 对于 B，取 $a=\df12$，则不存在集合中的元素 $x$ 使得 $|x-0|=|x|<a$​．
+>
+> 对于 C，对任意的 $a$，取 $n=\lc\df1a\rc+1$，则 $|x-0|=\lv\df1{\lc1/a\rc+1}\rv<a$，满足定义．
+>
+> 对于 D，对任意 $n\in\N^\ast$，有 $x=\df n{n+1}\ge\df12$，取 $a=\df12$，则不存在 $n\in\N^\ast$ 所对应的 $x=\df n{n+1}$ 使得 $|x-0|=|x|<a$．
+
+综上，选 AC．
+
+:::
+
+:::info 例 3.3
+
+**（多选题）** 对任意 $A,B\in\R$，记 $A\oplus B=\{x\mid x\in A\cup B,x\notin A\cap B\}$，并称 $A\oplus B$ 为集合 $A,B$ 的对称差．例如：若 $A=\{1,2,3\},B=\{2,3,4\}$，则 $A\oplus B=\{1,4\}$​．下列命题中，为真命题的是（　　）
+
+- A. 若 $A\oplus B=B$，则 $A=\varnothing$ 
+- B. 若 $A\oplus B=\varnothing$，则 $A=B$ 
+- C. 若 $A\oplus B\subseteq A$，则 $A\subseteq B$ 
+- D. 存在 $A,B\subseteq\R$，使得 $A\oplus B\ne\complement_\R A\oplus\complement_\R B$ 
+
+:::
+
+:::tip 例 3.3 解答
+
+选 AB．
 
 :::
 
