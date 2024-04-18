@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: 基本不等式（均值不等式）及其应用．
 ---
 
 # 基本不等式
