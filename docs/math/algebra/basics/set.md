@@ -57,7 +57,7 @@ $$
 - 自然数集（或非负整数集）：$\N=\{0,1,2,3,\dots\}$．
 - 正数集：$\N^\ast$ 或 $\N_+=\{1,2,3,\dots\}$．
 - 整数集：$\Z=\{\dots,-2,-1,0,1,2,\dots\}$．
-- 有理数集：$\mathbb Q=\left\{a\in\R\mid a=\df qp,\;p,q\in\Z,(p,q)=1,p>0\right\}$ （Q 来源于 quotient（商））．
+- 有理数集：$\mathbb Q=\{a\in\R\mid a=\df qp,\;p,q\in\Z,(p,q)=1,p>0\}$ （Q 来源于 quotient（商））．
 - 实数集：$\R$．
 - 复数集：$\mathbb C$．
 - 素数集：$\mathbb P=\{2,3,5,7,11,13,17,\dots\}$．
@@ -88,7 +88,7 @@ $$
 
 总之，我们用方括号表示包含端点，圆括号表示不包含端点．正、负无穷一般用圆括号．
 
-另外，用区间的并表示「或」，如 $(-\infty,1)\cup\left[\df32,+\infty\right)=\left\{x\in\R\mid x<1\ 或\ x\ge\df32\right\}$，$(-\infty,2)\cup(2,+\infty)=\{x\in\R\mid x\ne2\}$．
+另外，用区间的并表示「或」，如 $(-\infty,1)\cup[\df32,+\infty)=\{x\in\R\mid x<1\ 或\ x\ge\df32\}$，$(-\infty,2)\cup(2,+\infty)=\{x\in\R\mid x\ne2\}$．
 
 注：正无穷 $+\infty$ 中的正号 $+$ 有时可以省略．
 
@@ -170,23 +170,23 @@ $$
 
 性质如下：
 
-- $A\cup\left(\complement_UA\right)=U$．
+- $A\cup(\complement_UA)=U$．
 
-- $A\cap\left(\complement_UA\right)=\varnothing$．
+- $A\cap(\complement_UA)=\varnothing$．
 
 - $\complement_U\varnothing=U$．
 
 - $\complement_UU=\varnothing$．
 
-- $\complement_U\left(\complement_UA\right)=A$（对合律）．
+- $\complement_U(\complement_UA)=A$（对合律）．
 
 - 若 $A\subseteq B$，则 $\complement_UB\subseteq\complement_UA$（逆否命题）．
 
 - De Morgan 定律：
 
-    $\complement_U\left(A\cap B\right)=\left(\complement_UA\right)\cup\left(\complement_UB\right)$．
+    $\complement_U(A\cap B)=(\complement_UA)\cup(\complement_UB)$．
 
-    $\complement_U\left(A\cup B\right)=\left(\complement_UA\right)\cap\left(\complement_UB\right)$．
+    $\complement_U(A\cup B)=(\complement_UA)\cap(\complement_UB)$．
 
 注：如果从上下文看，所讨论的全集 $U$ 是显然的，那么 $U$ 可以省略，即将 $A$ 的补集表示为 $\complement A$．
 
@@ -222,7 +222,7 @@ $$
 
 :::info 例 1.1
 
-设 $a,b\in\R$，集合 $\{1,a+b,a\}=\left\{0,\df ba,b\right\}$，求 $a^{2023}+b^{2024}$ 的值．
+设 $a,b\in\R$，集合 $\{1,a+b,a\}=\{0,\df ba,b\}$，求 $a^{2023}+b^{2024}$ 的值．
 
 :::
 

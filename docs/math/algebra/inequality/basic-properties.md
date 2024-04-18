@@ -113,7 +113,7 @@ $$
 p-q
 &=\df{b^2}a+\df{a^2}b-a-b \\
 &=\df{b^2-a^2}{a}+\df{a^2-b^2}{b} \\
-&=(b^2-a^2)\left(\df1a-\df1b\right) \\
+&=(b^2-a^2)(\df1a-\df1b) \\
 &=\df{(b-a)^2(b+a)}{ab}.
 \end{aligned}
 $$
