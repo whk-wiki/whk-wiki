@@ -74,7 +74,7 @@ $$
 
 ### 区间
 
-另一种表示 **一个范围内的所有实数构成的数集** 的方法是 **区间**．如：
+另一种表示 **一个范围内的所有实数构成的数集** 的方法是 **区间**．其形如：
 
 - $[a,b]=\{x\in\R\mid a\le x\le b\}$．
 - $[a,b)=\{x\in\R\mid a\le x<b\}$．
@@ -88,6 +88,8 @@ $$
 
 总之，我们用方括号表示包含端点，圆括号表示不包含端点．正、负无穷一般用圆括号．
 
+两端包含端点的称为 **闭区间**，两端不包含端点的称为 **开区间**，一端包含一端不包含的称为 **半开半闭区间**．
+
 另外，用区间的并表示「或」，如 $(-\infty,1)\cup[\df32,+\infty)=\{x\in\R\mid x<1\ 或\ x\ge\df32\}$，$(-\infty,2)\cup(2,+\infty)=\{x\in\R\mid x\ne2\}$．
 
 注：正无穷 $+\infty$ 中的正号 $+$ 有时可以省略．
@@ -99,12 +101,11 @@ $$
 一般地，对于两个集合 $A,B$，如果集合 $A$ 中任意一个元素都是集合 $B$ 中的元素，就称集合 $A$ 为集合 $B$ 的 **子集**，记作 $A\subseteq B$ 或 $B\supseteq A$，读作「$A$ 包含于 $B$」或「$B$ 包含 $A$」．
 
 一般地，如果集合 $A$ 的任何一个元素都是集合 $B$ 的元素，同时集合 $B$ 的任何一个元素都是集合 $A$ 的元素，那么集合 $A$ 与集合 $B$ 相等，记作 $A=B$．也就是说，
-
 $$
-A\subseteq B,B\subseteq A\iff A=B.
+A\subseteq B \operatorname{and} B\subseteq A\iff A=B.
 $$
 
-如果集合 $A\subseteq B$，但存在元素 $a\in A$，且 $a\notin B$，就称集合 $A$ 是集合 $B$ 的 **真子集**，记作 $A\subsetneqq B$．
+如果集合 $A\subseteq B$，但存在元素 $a\in A$，且 $a\notin B$，就称集合 $A$ 是集合 $B$ 的 **真子集**，记作 $A\subsetneqq B$ 或 $B\supsetneqq A$．
 
 一般地，我们把不含任何元素的集合叫做 **空集**，记为 $\varnothing$，并规定：**空集是任何集合的子集**．
 
@@ -124,7 +125,7 @@ $$
 一般地，由所有属于集合 $A$ *或*属于集合 $B$ 的元素组成的集合，称为集合 $A$ 与 $B$ 的 **并集**，记作 $A\cup B$（读作「$A$ 并 $B$」），即
 
 $$
-A\cup B\coloneqq\{x\mid x\in A,\mathrm{or\ }x\in B\}.
+A\cup B\coloneqq\{x\mid x\in A \operatorname{or} x\in B\}.
 $$
 
 性质如下：
@@ -139,7 +140,7 @@ $$
 一般地，由所有属于集合 $A$ *且*属于集合 $B$ 的元素组成的集合，称为集合 $A$ 与 $B$ 的 **交集**，记作 $A\cap B$（读作「$A$ 交 $B$」），即
 
 $$
-A\cap B\coloneqq\{x\mid x\in A,\mathrm{and\ }x\in B\}.
+A\cap B\coloneqq\{x\mid x\in A \operatorname{and} x\in B\}.
 $$
 
 性质如下：
@@ -152,10 +153,10 @@ $$
 一系列集合的并集或交集可以用大运算符表示，其使用方法与求和符号相同：
 
 $$
-\begin{aligned}
+\bal
 \bigcup_{i=1}^nA_i=A_1\cup\dots\cup A_n. \\
 \bigcap_{i=1}^nA_i=A_1\cap\dots\cap A_n.
-\end{aligned}
+\eal
 $$
 
 ### 补集
@@ -194,9 +195,18 @@ $$
 
 ## 集合中的元素个数
 
-用 $\operatorname{card}(A)$ 表示集合 $A$ 的基数（cardinality），即有限集合 $A$ 中元素的个数．
+用 $\card(A)$ 表示集合 $A$ 的基数（cardinality），即有限集合 $A$ 中元素的个数．
 
 注：也可以表示为 $|A|$，但此符号也同时表示实数的绝对值、复数的模以及向量的长度等．
+
+## 集合的子集个数
+
+若集合 $A$ 中含有 $n$（$n\in\N$）个元素，则
+
+- 它的子集个数为 $2^n$；
+- 它的真子集个数为 $2^n-1$；
+- 它的非空子集个数为 $2^n-1$；
+- 它的非空真子集个数为 $2^n-2$（$n\ge1$）．
 
 ### 容斥原理
 
@@ -205,7 +215,7 @@ $$
 对任意两个有限集合 $A,B$，有
 
 $$
-\operatorname{card}(A\cup B)=\operatorname{card}(A)+\operatorname{card}(B)-\operatorname{card}(A\cap B).
+\card(A\cup B)=\card(A)+\card(B)-\card(A\cap B).
 $$
 
 三个集合的容斥原理：
@@ -289,7 +299,7 @@ $\exists\,x\in C,x\in A$ 为假命题，则 $\forall\,x\in C,x\notin A$ 为真�
 
 :::info 例 3.1
 
-设 $P,Q$ 是两个集合，定义集合 $P\setminus Q=\{x\mid x\in P, x\notin Q\}$，如果 $P=\{x\mid1<2^x<4\}$，$Q=\{y\mid y=2+\sin x,x\in\R\}$，请求出 $P\setminus Q$．
+设 $P,Q$ 是两个集合，定义集合 $P\setminus Q=\{x\mid x\in P \operatorname{and} x\notin Q\}$，如果 $P=\{x\mid1<2^x<4\}$，$Q=\{y\mid y=2+\sin x,x\in\R\}$，请求出 $P\setminus Q$．
 
 :::
 
@@ -312,7 +322,7 @@ $P=(0,2)$，$Q=[1,3]$．根据定义，$P\setminus Q$ 就是从 $P$ 中去掉 $P
 
 这道题的思想常应用于证明集合的有界性，以及对极限的严谨定义．
 
-:::tip 例 3.2 解答
+::::tip 例 3.2 解答
 
 题意翻译一下也就是说：如果集合 $X$ 中的元素能 **任意地接近** $x_0$，或者说与 $x_0$ 的 **距离任意地小**，那么 $x_0$ 为 $X$​ 的聚点．
 
@@ -338,27 +348,40 @@ D 选项，由于整数 $n\ge1$，$\df n{n+1}=1-\df1{n+1}\ge\df12$，则其不�
 
 综上，选 AC．
 
-:::
+::::
 
 :::info 例 3.3
 
-**（多选题）** 对任意 $A,B\in\R$，记 $A\oplus B=\{x\mid x\in A\cup B,x\notin A\cap B\}$，并称 $A\oplus B$ 为集合 $A,B$ 的对称差．例如：若 $A=\{1,2,3\},B=\{2,3,4\}$，则 $A\oplus B=\{1,4\}$​．下列命题中，为真命题的是（　　）
+**（多选题）** 指示函数是一个重要的数学函数，通常用来表示某个 条件的成立情况．已知 $U$ 为全集且元素个数有限，对于 $U$ 的任意一个子集 $S$，定义其指示函数 $1_S(x)=\bcs1,&x\in S,\\0,&x\in\complement_US.\ecs$ 若 $A,B,C\subseteq U$，则（　　）
 
-- A. 若 $A\oplus B=B$，则 $A=\varnothing$ 
-- B. 若 $A\oplus B=\varnothing$，则 $A=B$ 
-- C. 若 $A\oplus B\subseteq A$，则 $A\subseteq B$ 
-- D. 存在 $A,B\subseteq\R$，使得 $A\oplus B\ne\complement_\R A\oplus\complement_\R B$ 
+注：$\sum_{x\in G}f(x)$ 表示集合 $G$ 中所有元素 $x$ 所对应的函数值 $f(x)$ 之和（其中 $G$ 是 $f$ 定义域的子集）．
+
+- A. $\sum_{x\in A}1_A(x)<\sum_{x\in U}1_A(x)$ 
+- B. $1_{A\cap B}(x)\le1_A(x)\le1_{A\cup B}(x)$ 
+- C. $\sum_{x\in U}1_{A\cup B}(x)=\sum_{x\in U}1_A(x)+1_B(x)-1_A(x)1_B(x)$ 
+- D. $\sum_{x\in U}(1-1_A(x))(1-1_B(x))(1-1_C(x))=\sum_{x\in U}1_U(x)-\sum_{x\in U}1_{A\cup B\cup C}(x)$ 
 
 :::
 
 :::tip 例 3.3 解答
 
-选 AB．
+对子集的指示函数求和，事实上就等于求子集的元素个数，即 $\sum_{x\in U}1_S(x)=\card(S)$ 表示全集 $U$ 中有多少个元素在子集 $S$ 中．
+
+对于 A，由于 $A\subseteq U$，有 $\sum_{x\in U}1_A(x)=\sum_{x\in A}1_A(x)+\sum_{x\in\complement_UA}1_A(x)$，由于 $\complement_UA$ 中没有元素在 $A$ 中，第二项为 $0$，因此 $\sum_{x\in U}1_A(x)=\sum_{x\in A}1_A(x)$．因此 A 错误．
+
+对于 B，因为 $(A\cap B)\subseteq A\subseteq(A\cup B)$，若 $x$ 在集合 $G$ 的子集中，则 $x$ 一定在集合 $G$ 中，因此 $1_{A\cap B}(x)\le1_A(x)\le1_{A\cup B}(x)$ 成立．因此 B 正确．
+
+对于 C，首先有 $1_A(x)1_B(x)=1_{A\cap B}(x)$，因此右边等于 $\card(A)+\card(B)-\card(A\cap B)=\card(A\cup B)$ 等于左边．因此 C 正确．
+
+对于 D，有
+$$
+\bal
+x\in A\cup B\cup C&\iff(1-1_A(x))(1-1_B(x))(1-1_C(x))=0,\\
+x\notin A\cup B\cup C&\iff(1-1_A(x))(1-1_B(x))(1-1_C(x))=1,
+\eal
+$$
+所以 $\text{Left Side}=\card(\complement_U(A\cup B\cup C))=\card(U)-\card(A\cup B\cup C)=\text{Right Side}$．因此 D 正确．
+
+故选 BCD．
 
 :::
-
-## 参考资料
-
-International Organization for Standardization. (2019). Quantities and units—Part 2: Mathematics (ISO Standard No. 80000-2:2019). https://www.iso.org/standard/64973.html
-
-Complement (set theory). (2023, November 8). Wikipedia. https://en.wikipedia.org/wiki/Complement_(set_theory)

@@ -21,7 +21,7 @@ sidebar_position: 1
 - 可加性：$a>b \iff a\pm c>b\pm c$．
 - 可乘性：$a>b,c>0 \implies ac>bc$；$a>b,c<0 \implies ac<bc$．
 - 同向可加性：$a>b,c>d \implies a+c>b+d$．
-- 同向同正可乘性：$a>b>0,c>d>0 \implies ac>bd$．
+- 同向**同正**可乘性：$a>b>0,c>d>0 \implies ac>bd$．
 - 可乘方性：$a>b>0,n\in\N,n\ge2 \implies a^n>b^n$．
 - 可开方性：$a>b>0,n\in\N,n\ge2 \implies \sqrt[n]a>\sqrt[n]b$．
 
@@ -55,13 +55,13 @@ sidebar_position: 1
 - 对于任意 $a\in\R$，有 $a^2\ge0$，当且仅当 $a=0$ 时等号成立．
 - 对于任意 $a,b\in\R$，有 $a^2+b^2\ge2ab$，当且仅当 $a=b$ 时等号成立．证明：$(a-b)^2=a^2+b^2-2ab\ge0$，所以 $a^2+b^2\ge2ab$．
 
-## 不等式基本题型
+## 不等式基本性质的有关题型
 
 ### 不等式的基本性质的直接应用
 
 :::info 例 1
 
-（多选题）已知 $a>b\ge2$，则（　　）
+**（多选题）** 已知 $a>b\ge2$，则（　　）
 
 - A. $b^2<3b-a$
 - B. $a^3+b^3>a^2b+ab^2$
@@ -72,7 +72,7 @@ sidebar_position: 1
 
 :::tip 例 1 解答
 
-对于 A，由于 $b-a<0$，所以若 A 成立，则 $b^2-2b<b-a<0$，而当 $b\ge2$ 时，$b^2-2b$ 的值域为 $[0,+\infty)$，因此 A 错误．
+对于 A，由于 $b-a<0$，所以若 A 成立，则 $b^2-2b<b-a<0$，而当 $b\ge2$ 时，$b^2-2b=b(b-2)\ge2\times0=0$，因此 A 错误．
 
 对于 B，作差化简得 $(a-b)^2(a+b)>0$ 成立，因此 B 正确．
 
@@ -106,19 +106,21 @@ sidebar_position: 1
 
 :::
 
+在答题时，如果所证明的不等式可以取等，**一定要说明取等条件**．
+
 :::tip 例 2 解答 1（作差法）
 
 $$
-\begin{aligned}
+\bal
 p-q
 &=\df{b^2}a+\df{a^2}b-a-b \\
 &=\df{b^2-a^2}{a}+\df{a^2-b^2}{b} \\
 &=(b^2-a^2)(\df1a-\df1b) \\
 &=\df{(b-a)^2(b+a)}{ab}.
-\end{aligned}
+\eal
 $$
 
-因为 $a<0,b<0$，所以 $a+b<0,ab>0$，又 $(b-a)^2\ge0$，所以 $p-q\le0$，所以 $p\le q$．
+因为 $a<0,b<0$，所以 $a+b<0,ab>0$，又 $(b-a)^2\ge0$，所以 $p-q\le0$，所以 $p\le q$，当且仅当 $a=b$ 时等号成立．
 
 :::
 
@@ -178,19 +180,19 @@ $$
 $$
 由不等式的同向可加性，三式相加得
 $$
-\begin{aligned}
+\bal
     \fr A{B+C}+\fr B{C+A}+\fr C{A+B}&<\fr{2A}{A+B+C}+\fr{2B}{A+B+C}+\fr{2C}{A+B+C} \\
     &=\fr{2A+2B+2C}{A+B+C}=2.
-\end{aligned}
+\eal
 $$
 证毕．
 
 （2）考虑将分母转化为 $1+a+b$ 以合并不等式右边的两个分式．可以猜想与三角形的三边关系有关．在锐角 $\triangle ABC$ 中，$c<a+b$，所以 $a+b-c>0$，由糖水不等式有
 $$
-\begin{aligned}
+\bal
     \fr c{1+c}<\fr{c+(a+b-c)}{1+c+(a+b-c)}&=\fr{a+b}{1+a+b}\\
     &=\fr a{1+a+b}+\fr b{1+a+b}<\fr a{1+a}+\fr b{1+b}.
-\end{aligned}
+\eal
 $$
 证毕．
 

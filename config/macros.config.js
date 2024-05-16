@@ -28,5 +28,6 @@ export default {
 	"\\xto": "\\xrightarrow",
 	"\\xgets": "\\xleftarrow",
 	"\\xdarr": "\\darr \\raisebox{.3ex}{$\\scriptstyle {#1}$}",
-	"\\xudarr": "\\raisebox{.3ex}{$\\scriptstyle {#1}$} \\upharpoonleft\\!\\downharpoonright \\raisebox{.3ex}{$\\scriptstyle {#2}$}"
+	"\\xudarr": "\\raisebox{.3ex}{$\\scriptstyle {#1}$} \\upharpoonleft\\!\\downharpoonright \\raisebox{.3ex}{$\\scriptstyle {#2}$}",
+	"\\card": "\\operatorname{card}"
 }

@@ -37,11 +37,11 @@ $$
 $$
 a+b-2\sqrt{ab}\ge0,
 $$
-即
+只需证
 $$
 (\sqrt a-\sqrt b)^2\ge0.
 $$
-上式显然成立，且当且仅当 $a=b$ 时上式中的等号成立．因此，原不等式成立．证毕．
+上式显然成立，当且仅当 $a=b$ 时，上式中的等号成立．因此，原不等式成立．证毕．
 
 这种「要证……只需证……」的写法常用于考试中的证明题．
 
@@ -55,11 +55,11 @@ $$
 
 证明：
 $$
-\begin{aligned}
-    a+b=-((-a)+(-b))&\ge2\sqrt{(-a)(-b)}\\
-    -(a+b)&\ge2\sqrt{ab}\\
-    a+b&\le-2\sqrt{ab}.
-\end{aligned}
+\bal
+    (-a)+(-b)&\ge2\sqrt{(-a)(-b)},\\
+    -(a+b)&\ge2\sqrt{ab},\\
+    a+b&\le-2\sqrt{ab},
+\eal
 $$
 当且仅当 $-a=-b$，即 $a=b$ 时等号成立．证毕．
 
@@ -81,11 +81,11 @@ $$
 
 1. $ab\le\df{(a+b)^2}4$，其中 $a,b\in\R$，当且仅当 $a=b$ 时等号成立．
 
-2. $|x+\df1x|\ge2$，其中 $x\ne0$，当且仅当 $x=\pm1$ 时等号成立．
+2. $\lv x+\df1x\rv\ge2$，其中 $x\ne0$，当且仅当 $x=\pm1$ 时等号成立．
    
-3. $|\df ba+\df ab|\ge2$，其中 $a,b$ 满足 $ab\ne0$，当且仅当 $a=\pm b$ 时等号成立．
+3. $\lv\df ba+\df ab\rv\ge2$，其中 $a,b$ 满足 $ab\ne0$，当且仅当 $a=\pm b$ 时等号成立．
 
-4. $|ax+\df bx|\ge2\sqrt{ab}$，其中 $x\ne0$，当且仅当 $x=\pm\sqrt{\df ba}$ 时等号成立．
+4. $\lv ax+\df bx\rv\ge2\sqrt{ab}$，其中 $x\ne0$，当且仅当 $x=\pm\sqrt{\df ba}$ 时等号成立．
 
 5. $a^2+b^2+c^2\ge ab+bc+ca$，其中 $a,b,c\in\R$，当且仅当 $a=b=c$ 时等号成立．证明：两边乘 $2$ 后完全平方．
 
@@ -105,23 +105,23 @@ $$
 
 第一个不等号：
 $$
-\begin{aligned}
+\bal
     (a-b)^2&\ge0 \\
     (a+b)^2&\ge4ab \\
     a+b&\ge2\sqrt{ab} \\
     \fr1{a+b}&\le\fr1{2\sqrt{ab}} \\
     \fr{2ab}{a+b}&\le\sqrt{ab} \\
     \fr2{\fr1a+\fr1b}&\le\sqrt{ab}
-\end{aligned}
+\eal
 $$
 第三个不等号：
 $$
-\begin{aligned}
+\bal
     a^2+b^2&\ge2ab \\
     2a^2+2b^2&\ge(a+b)^2 \\
     \fr{a^2+b^2}2&\ge\fr{(a+b)^2}4 \\
     \sqrt{\fr{a^2+b^2}2}&\ge\fr{a+b}2
-\end{aligned}
+\eal
 $$
 证毕．
 
@@ -153,7 +153,7 @@ $y=x-\df1x$ 和 $y=2x-\df3x$ 图象分别如下图所示：
 
 ![](./assets/am-gm-inequality/fig-3.png)
 
-上面这些函数的大致图像可以通过 **平移**、极限、研究奇偶性、研究单调性等方式画出．
+上面这些函数的大致图像可以通过 **平移**、求极限（渐近线）、研究奇偶性、研究单调性、研究凹凸性等方法画出．
 
 ## 基本不等式及均值不等式的常见应用
 
@@ -161,7 +161,7 @@ $y=x-\df1x$ 和 $y=2x-\df3x$ 图象分别如下图所示：
 
 :::info 例 1
 
-（多选题）若 $x,y$ 满足 $x^2+y^2-xy=1$，则（　　）
+**（多选题）** 若 $x,y$ 满足 $x^2+y^2-xy=1$，则（　　）
 - A. $x+y\le1$
 - B. $x+y\ge-2$
 - C. $x^2+y^2\le2$
@@ -183,11 +183,11 @@ x^2+y^2=1+xy\le1+\fr{x^2+y^2}2,
 $$
 解得 $x^2+y^2\le2$，当且仅当 $x=y=\pm1$ 时等号成立．所以 C 正确．
 
-对于 D，对所给等式配方得 $(x-\df y2)^2+(\df{\sqrt3y}2)^2=1$，使用 **三角换元** 法，设
+*对于 D，对所给等式配方得 $(x-\df y2)^2+(\df{\sqrt3y}2)^2=1$，使用 **三角换元** 法，设
 $$
-x-\fr y2=\cos\theta,\df{\sqrt3y}2=\sin\theta.
+x-\fr y2=\cos\theta,\df{\sqrt3y}2=\sin\theta,\theta\in\R,
 $$
-解得
+即
 $$
 x=\cos\theta+\fr{\sqrt3}3\sin\theta,y=\fr{2\sqrt3}3\sin\theta,
 $$
@@ -210,23 +210,23 @@ $$
 由此：
 - 若 $a,b,x,y>0$，$ax+by=1$，则
 $$
-\begin{aligned}
+\bal
     \fr1x+\fr1y=(ax+by)(\fr1x+\fr1y)&=a+b+\df{by}x+\df{ax}y \\
     &\ge a+b+2\sqrt{ab}=(\sqrt a+\sqrt b)^2.
-\end{aligned}
+\eal
 $$
 
 - 若 $a,b,x,y>0$，$\df ax+\df by=1$，则
 $$
-\begin{aligned}
+\bal
     x+y=(x+y)(\fr ax+\fr by)&=a+b+\fr{ay}x+\fr{bx}y \\
     &\ge a+b+2\sqrt{ab}=(\sqrt a+\sqrt b)^2.
-\end{aligned}
+\eal
 $$
 
 :::note 注意
 
-如果 **连续使用** 基本不等式，必须保证他们 **等号成立的条件一致**．
+如果 **连续使用** 基本不等式，则取等条件为每次基本不等式的取等条件的**交**．
 
 :::
 
@@ -242,7 +242,7 @@ $$
 $$
 \fr1a+\fr a{b^2}+b=\fr1a+\fr a{b^2}+\fr b2+\fr b2\ge4\sqrt[4]{\fr1a\cdot\fr a{b^2}\cdot\fr b2\cdot\fr b2}=4\sqrt[4]{\fr14}=2\sqrt2,
 $$
-当且仅当 $a=b=2$ 时等号成立．
+当且仅当 $\df1a=\df a{b^2}=\df b2$，即 $a=b=2$ 时等号成立．
 
 因此，$\df1a+\df a{b^2}+b$ 的最小值为 $2\sqrt2$．
 
@@ -305,15 +305,15 @@ $$
 
 由 $\df1a+\df2b=1$ 得 $ab-2a-b=0$，即 $(a-1)(b-2)=2$．因此
 $$
-\begin{aligned}
+\bal
     \fr3{a-1}+\fr2{b-2}&=\fr{2a+3b-8}{(a-1)(b-2)}\\
     &=\fr{2a+3b-8}2\\
     &=a+\fr32b-4\\
     &=(a+\fr{3b}2)(\fr1a+\fr2b)-4\\
     &=4+\fr{3b}{2a}+\fr{2a}b-4\ge2\sqrt3,
-\end{aligned}
+\eal
 $$
-当且仅当 $\df{3b}{2a}=\df{2a}b$ 时等号成立．
+当且仅当 $\df{3b}{2a}=\df{2a}b$，即有序数对 $(x,y)=(0,0)或(\sqrt3+1,\df{6+2\sqrt3}3)或(-\sqrt3+1，\df{6-2\sqrt3}3)$ 时等号成立．
 
 因此 $\df3{a-1}+\df2{b-2}$ 的最小值为 $2\sqrt3$．
 
@@ -365,11 +365,11 @@ $$
 
 令 $1+\sqrt t=m>1$，则 $t=(m-1)^2$，于是上式即
 $$
-\begin{aligned}
+\bal
     \fr m{1+(m-1)^2}&=\fr m{m^2-2m+2}\\
     &=\fr1{m+\fr2m-2}\\
     &\le\fr1{2\sqrt2-2}=\fr{\sqrt2+1}2,
-\end{aligned}
+\eal
 $$
 当且仅当 $m=\df2m$，即 $m=\sqrt2$，即 $t=\df yx=3-2\sqrt2$ 时等号成立．
 
@@ -391,7 +391,7 @@ $$
 $$
 5x^2+y^2=\fr1{y^2}.
 $$
-根据消元的思想，将 $x^2$ 用含 $y^2$ 的式子表示，有
+根据 **消元** 的思想，将 $x^2$ 用含 $y^2$ 的式子表示，有
 $$
 x^2=\fr15(\fr1{y^2}-y^2).
 $$
