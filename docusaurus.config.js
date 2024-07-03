@@ -92,9 +92,7 @@ const config = {
 		}),
 
 	plugins: [
-		// @ts-ignore
-		'./src/assets-loader/ggb',
-		'./src/assets-loader/mjs'
+		'assets-loader'
 	],
 
 	themes: ['@docusaurus/theme-mermaid'],
