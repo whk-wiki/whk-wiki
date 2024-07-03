@@ -22,6 +22,8 @@ export default {
 	"\\df": "\\dfrac",
 	"\\fr": "\\frac",
 	"\\d": "\\mathop{}\\!\\mathrm{d}",
+	"\\e": "\\mathrm e",
+	"\\Q": "\\mathbb Q",
 	"\\nimplies": "\\mathrel{\\mathclap{\\qquad/}{\\implies}}",
 	"\\nimpliedby": "\\mathrel{\\mathclap{\\qquad\\enspace/}{\\impliedby}}",
 	"\\niff": "\\mathrel{\\mathclap{\\qquad\\enspace/}{\\iff}}",
