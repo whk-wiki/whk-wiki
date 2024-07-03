@@ -3704,13 +3704,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"assets-loader@file:./src/assets-loader::locator=whk-wiki%40workspace%3A.":
-  version: 0.0.0
-  resolution: "assets-loader@file:./src/assets-loader#./src/assets-loader::hash=661e8e&locator=whk-wiki%40workspace%3A."
-  checksum: 10c0/f003938eaf88c743399500fa9910ac515e720f5731b2b08425f2dd051c38d3d4436d27170df3a962bfbd69e571423c3fd76101ede940b2975c5c7e07016f7431
-  languageName: node
-  linkType: hard
-
 "astring@npm:^1.8.0":
   version: 1.8.6
   resolution: "astring@npm:1.8.6"
@@ -12734,7 +12727,6 @@ __metadata:
     "@docusaurus/types": "npm:3.4.0"
     "@giscus/react": "npm:~2.3.0"
     "@mdx-js/react": "npm:^3.0.0"
-    assets-loader: "file:./src/assets-loader"
     clsx: "npm:^2.0.0"
     prism-react-renderer: "npm:^2.3.0"
     react: "npm:^18.0.0"

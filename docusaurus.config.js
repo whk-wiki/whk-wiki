@@ -92,7 +92,7 @@ const config = {
 		}),
 
 	plugins: [
-		'assets-loader'
+		'./src/assets-loader'
 	],
 
 	themes: ['@docusaurus/theme-mermaid'],
