@@ -55,7 +55,7 @@ p img {
 
 @font-face {
 	font-family: "Caroline";
-	src: url("/font/Caroline.otf");
+	src: url("/fonts/Caroline.otf");
 }
 
 .navbar__items {
