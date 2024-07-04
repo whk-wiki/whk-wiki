@@ -56,9 +56,9 @@ $L$ 为物体的运动路径．**注意我们此时划分的对象应该是物�
 - $F = 0$ 时，$W = 0$．
 - $x = 0$ 时，$W = 0$．
 - 否则，$W$ 的符号与 $\cos \theta$ 保持一致，也即：
-	- $0 \le \theta < \dfrac \pi 2$ 时，$W > 0$．
-	- $\theta = \dfrac \pi 2$ 时，$W = 0$．
-	- $\dfrac \pi 2 < \theta \le \pi$ 时，$W < 0$．
+  - $0 \le \theta < \dfrac \pi 2$ 时，$W > 0$．
+  - $\theta = \dfrac \pi 2$ 时，$W = 0$．
+  - $\dfrac \pi 2 < \theta \le \pi$ 时，$W < 0$．
 
 也就是当力与位移呈锐角时，力做正功；力与位移呈钝角时，力做负功；力与位移呈直角时，力不做功．
 
