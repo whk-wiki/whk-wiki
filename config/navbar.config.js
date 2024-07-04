@@ -11,38 +11,80 @@ export default {
 		{
 			type: 'docSidebar',
 			sidebarId: 'introSidebar',
-			position: 'left',
 			label: '开始',
 		},
 		{
-			type: 'doc',
-			docId: 'home/algebra',
-			position: 'left',
-			label: '数学（代数）',
+			type: 'dropdown',
+			label: '数学',
+			items: [
+				{
+					type: 'doc',
+					docId: 'home/algebra',
+					label: '代数',
+				},
+				{
+					type: 'doc',
+					docId: 'home/geometry',
+					label: '几何',
+				},
+				{
+					type: 'doc',
+					docId: 'home/math-misc',
+					label: '杂项'
+				}
+			]
 		},
 		{
-			type: 'doc',
-			docId: 'home/geometry',
-			position: 'left',
-			label: '数学（几何）',
-		},
-		{
-			type: 'doc',
-			docId: 'home/physics',
-			position: 'left',
+			type: 'dropdown',
 			label: '物理',
+			items: [
+				{
+					type: 'doc',
+					docId: 'home/mechanics',
+					label: '力学',
+				},
+				{
+					type: 'doc',
+					docId: 'home/electromagnetism',
+					label: '电磁学',
+				},
+				{
+					type: 'doc',
+					docId: 'home/physics-misc',
+					label: '杂项'
+				},
+				{
+					type: 'doc',
+					docId: 'home/topic',
+					label: '专题'
+				},
+			]
 		},
 		{
-			type: 'doc',
-			docId: 'home/chemistry',
-			position: 'left',
+			type: 'dropdown',
 			label: '化学',
-		},
-		{
-			type: 'doc',
-			docId: 'home/biology',
-			position: 'left',
-			label: '生物',
+			items: [
+				{
+					type: 'doc',
+					docId: 'home/element',
+					label: '元素化学',
+				},
+				{
+					type: 'doc',
+					docId: 'home/kinetics',
+					label: '化学动力学',
+				},
+				{
+					type: 'doc',
+					docId: 'home/structure',
+					label: '结构化学',
+				},
+				{
+					type: 'doc',
+					docId: 'home/organic',
+					label: '有机化学',
+				}
+			]
 		},
 		{
 			href: 'https://github.com/whk-wiki/whk-wiki',
