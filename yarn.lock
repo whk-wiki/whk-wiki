@@ -1903,6 +1903,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@docusaurus/plugin-client-redirects@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "@docusaurus/plugin-client-redirects@npm:3.4.0"
+  dependencies:
+    "@docusaurus/core": "npm:3.4.0"
+    "@docusaurus/logger": "npm:3.4.0"
+    "@docusaurus/utils": "npm:3.4.0"
+    "@docusaurus/utils-common": "npm:3.4.0"
+    "@docusaurus/utils-validation": "npm:3.4.0"
+    eta: "npm:^2.2.0"
+    fs-extra: "npm:^11.1.1"
+    lodash: "npm:^4.17.21"
+    tslib: "npm:^2.6.0"
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  checksum: 10c0/18a7ab5fd9ddc375af04fe5c6b6680e20d34539dda6a74e1959f3a2887ef3fdb6520156a3418771a526d27e65d904ab1f492e7d655248b7a95384b4e4d775288
+  languageName: node
+  linkType: hard
+
 "@docusaurus/plugin-content-blog@npm:3.4.0":
   version: 3.4.0
   resolution: "@docusaurus/plugin-content-blog@npm:3.4.0"
@@ -12722,6 +12742,7 @@ __metadata:
   dependencies:
     "@docusaurus/core": "npm:3.4.0"
     "@docusaurus/module-type-aliases": "npm:3.4.0"
+    "@docusaurus/plugin-client-redirects": "npm:^3.4.0"
     "@docusaurus/preset-classic": "npm:3.4.0"
     "@docusaurus/theme-mermaid": "npm:3.4.0"
     "@docusaurus/types": "npm:3.4.0"
