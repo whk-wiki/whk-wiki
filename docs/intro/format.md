@@ -15,9 +15,11 @@ description: whk wiki 的格式手册．
 
 ## Markdown 格式
 
-- 文件必须以 front matter（用 `---` 括起来的 YAML 部分）开头．front matter 有以下规则：
-	- 所有文档文件的 front matter 都有两个 **必须设定** 的字段：`sidebar_position` 和 `description`．
-	- 除上述两个必须设定字段外，其余字段均 **不应设定**．例外：部分特殊页面需要 `slug` 字段．
-	- `description` 字段的值应该是完整的一句话，末尾有句号．
-- 文件紧跟 front matter 后面的开头应该是文章的标题，用 Markdown H1 语法 `# 标题` 表示．这应该是全篇唯一一个出现了 Markdown H1 标题的地方，章节和更细分的标题应该采用二级及以上的标题．
-- 所有标题均应在井号后加英文半角空格，如 `## Markdown 格式`．
+- 文件必须以 [front matter](https://docusaurus.io/docs/markdown-features#front-matter) 开头．
+- **whk-wiki 的 front matter** 有以下规则：
+  - 所有文档文件的 front matter 都有且仅有三个字段：`sidebar_position`，`description` 和 `slug`．其中，`sidebar_position` 和 `description` **必须被设定**．
+  - 除上述字段外，其余字段均**不应被设定**．
+  - `description` 字段的值应该是完整的一句话，末尾有句号．
+- 文档文件 front matter 后紧跟文章的标题，用 Markdown H1 语法 `# title` 表示．这应该是整个文档文件**唯一的** Markdown H1 标题，细分标题均应从二级标题开始．
+- 所有标题均应在`#`后加英文半角空格，如 `## whk-wiki`．
+- 详细格式见 [Markdown Features | Docusaurus](https://docusaurus.io/docs/markdown-features).
