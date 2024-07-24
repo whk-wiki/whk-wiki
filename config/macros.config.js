@@ -31,5 +31,7 @@ export default {
 	"\\xgets": "\\xleftarrow",
 	"\\xdarr": "\\darr \\raisebox{.3ex}{$\\scriptstyle {#1}$}",
 	"\\xudarr": "\\raisebox{.3ex}{$\\scriptstyle {#1}$} \\upharpoonleft\\!\\downharpoonright \\raisebox{.3ex}{$\\scriptstyle {#2}$}",
-	"\\card": "\\operatorname{card}"
+	"\\card": "\\operatorname{card}",
+	"\\na": "{\\it N}_{\\rm A}",
+	"\\mr": "{\\it M}_{\\rm r}"
 }

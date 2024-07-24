@@ -1,4 +1,4 @@
-# 化学计量
+# 化学基础
 
 import DocCardList from '@theme/DocCardList';
 
