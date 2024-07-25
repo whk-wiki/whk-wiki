@@ -1,4 +1,4 @@
-# 化学基础
+# 化学基础知识
 
 import DocCardList from '@theme/DocCardList';
 

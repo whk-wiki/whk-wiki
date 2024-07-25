@@ -33,5 +33,7 @@ export default {
 	"\\xudarr": "\\raisebox{.3ex}{$\\scriptstyle {#1}$} \\upharpoonleft\\!\\downharpoonright \\raisebox{.3ex}{$\\scriptstyle {#2}$}",
 	"\\card": "\\operatorname{card}",
 	"\\na": "{\\it N}_{\\rm A}",
-	"\\mr": "{\\it M}_{\\rm r}"
+	"\\mr": "{\\it M}_{\\rm r}",
+	"\\rc": "\\mathrm R",
+	"\\vm": "V_{\\mathrm m}"
 }
