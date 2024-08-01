@@ -34,6 +34,5 @@ export default {
 	"\\card": "\\operatorname{card}",
 	"\\na": "{\\it N}_{\\rm A}",
 	"\\mr": "{\\it M}_{\\rm r}",
-	"\\rc": "\\mathrm R",
 	"\\vm": "V_{\\mathrm m}"
 }
