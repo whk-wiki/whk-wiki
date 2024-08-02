@@ -220,7 +220,7 @@ $$
 \eal
 $$
 
-- 若 $a,b,c,m,n,x,y>0$，其中 $a,b,c,m,n$ 是常数，且 $\df ax+\df by=1$，则
+- 若 $a,b,c,m,n,x,y>0$，其中 $a,b,c,m,n$ 是常数，且 $\df ax+\df by=c$，则
 $$
 \bal
     mx+ny&=\fr1c(mx+ny)(\fr ax+\fr by)\\
