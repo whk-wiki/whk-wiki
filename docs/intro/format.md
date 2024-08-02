@@ -23,3 +23,4 @@ description: whk wiki 的格式手册．
 - 文档文件 front matter 后紧跟文章的标题，用 Markdown H1 语法 `# title` 表示．这应该是整个文档文件**唯一的** Markdown H1 标题，细分标题均应从二级标题开始．
 - 所有标题均应在`#`后加英文半角空格，如 `## whk-wiki`．
 - 详细格式见 [Markdown Features | Docusaurus](https://docusaurus.io/docs/markdown-features).
+- **注意**: 请在编写内容前浏览此项目的[宏定义文件](https://github.com/whk-wiki/whk-wiki/blob/main/config%2Fmacros.config.js)，避免渲染错误和不必要的重复工作量。
