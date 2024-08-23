@@ -14,14 +14,33 @@
 
    文字表示：如果平面外的一条直线与平面内的一条直线平行 ，那么这条直线与这个平面平行。
 
-   符号表示：如果 $l\not\subset \alpha,m\subset \alpha,l\parallel m$，则 $l\parallel \alpha$。
+   符号表示：
+   <!--如果 $l\not\subset \alpha,m\subset \alpha,l\parallel m$，则 $l\parallel \alpha$。-->
+   $$
+   \left.
+   \begin{array}{l}
+      l\not\subset \alpha \\
+      m\subset \alpha \\
+      l\parallel m \\
+   \end{array}
+   \right\} = l\parallel \alpha
+   $$
 
 3. 线面平行的性质定理：
 
    文字表示：如果一条直线与一个平面平行，且经过这条直线的平面与这个平面相交，那么这条直线就与两平面的交线平行。
 
-   符号表示：如果 $l \parallel \alpha,l\subset\beta,\alpha \cap\beta=m$，则 $l\parallel m$。
-
+   符号表示：
+   <!--如果 $l \parallel \alpha,l\subset\beta,\alpha \cap\beta=m$，则 $l\parallel m$。-->
+   $$
+   \left.
+   \begin{array}{l}
+      l \parallel \alpha \\
+      l\subset\beta \\
+      \alpha \cap\beta=m \\
+   \end{array}
+   \right\} = l\parallel m
+   $$
    作用：已知线面平行可以求出线线平行：找平面，得交线，出平行。
 
 4. 证明线面平行一般有两种策略：
@@ -88,14 +107,32 @@
 
    文字表示：如果一个平面内有两条相交直线分别平行于另一个平面，那么这两个平面平行。
 
-   符号表示：如果 $l \subset \alpha,m \subset \alpha,l \cap m=P,l\parallel \beta,m\parallel \beta$，则 $\alpha \parallel \beta$。
-
+   符号表示：<!--如果 $l \subset \alpha,m \subset \alpha,l \cap m=P,l\parallel \beta,m\parallel \beta$，则 $\alpha \parallel \beta$。-->
+   $$
+   \left.
+   \begin{array}{l}
+      l \subset \alpha \\
+      m \subset \alpha \\
+      l \cap m=P \\
+      l\parallel \beta \\
+      m\parallel \beta \\
+   \end{array}
+   \right\} = \alpha \parallel \beta
+   $$
 2. 性质定理：
 
    文字表示：如果两个平行平面同时与第三个平面相交，那么它们的交线平行。
 
-   符号表示：如果 $\alpha \parallel \beta,\alpha \cap \gamma =l,\beta \cap \gamma =m$，则 $l \parallel m$。
-
+   符号表示：<!--如果 $\alpha \parallel \beta,\alpha \cap \gamma =l,\beta \cap \gamma =m$，则 $l \parallel m$。-->
+   $$
+   \left.
+   \begin{array}{l}
+      \alpha \parallel \beta \\
+      \alpha \cap \gamma =l \\
+      \beta \cap \gamma =m \\
+   \end{array}
+   \right\} = l \parallel m
+   $$
    作用：已知面面平行可以推出线线平行：找平面，得交线，出平行。
 
    **注意：这个定理的易错点是必须要保证有第三个交面将之前的两个平面所截，才能考虑交线。**
@@ -161,8 +198,15 @@
 
    文字表示：如果两条直线垂直于同一个平面，那么这两条直线平行。
 
-   符号表示：如果 $l \perp \alpha,m\perp \alpha$，则 $l \parallel m$。
-
+   符号表示：<!--如果 $l \perp \alpha,m\perp \alpha$，则 $l \parallel m$。-->
+   $$
+   \left.
+   \begin{array}{l}
+      l \perp \alpha \\
+      m\perp \alpha \\
+   \end{array}
+   \right\} = l \parallel m
+   $$
 5. 已知一个棱锥两条棱 $PA$ 和 $PB$ 相等，则从顶点 $P$ 做高 $PO$，那么有 $OA=OB$。由于 $OA$ 和 $OB$ 可以看做是 $PA$ 和 $PB$ 在底面上的投影，所以有**斜线相等，投影相等**。
 
 6. 共底边的等腰三角形，底边垂直于其它顶点连线。
@@ -173,16 +217,32 @@
 
    文字表示：如果一个平面经过另外一个平面的一条垂线，那么这两个平面互相垂直。
 
-   符号表示：如果 $l \subset \alpha,l \perp \beta$，则 $\alpha \perp \beta$。
-
+   符号表示：<!--如果 $l \subset \alpha,l \perp \beta$，则 $\alpha \perp \beta$。-->
+   $$
+   \left.
+   \begin{array}{l}
+      l \subset \alpha \\
+      l \perp \beta \\
+   \end{array}
+   \right\} = \alpha \perp \beta
+   $$
    找垂线：先找**交线的垂线**。若交线不好找，可以找到平面的关键直线然后考虑该直线与另一个平面是否垂直。
 
 2. 性质定理：
 
    文字表示：如果两个平面互相垂直，那么在一个平面内垂直于它们交线的直线垂直于另一个平面。
 
-   符号表示：如果 $\alpha \perp \beta,\alpha \cap \beta = m,l\subset \alpha,l\perp m$，则 $l\perp \beta$。
-
+   符号表示：<!--如果 $\alpha \perp \beta,\alpha \cap \beta = m,l\subset \alpha,l\perp m$，则 $l\perp \beta$。-->
+   $$
+   \left.
+   \begin{array}{l}
+      \alpha \perp \beta \\
+      \alpha \cap \beta = m \\
+      l\subset \alpha \\
+      l\perp m \\
+   \end{array}
+   \right\} = l\perp \beta
+   $$
    使用该定理的步骤：先找**交线**，再作**交线的垂线**，得**线面垂直**。
 
    易错点：未找交线直接证明线面垂直。
