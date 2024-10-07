@@ -1,10 +1,10 @@
 export default {
 	"\\*": "\\color{red}",
 	"\\red": "\\textcolor{red}{#1}",
-	"(": "\\left\\lparen",
-	")": "\\right\\rparen",
-	"[": "\\left\\lbrack",
-	"]": "\\right\\rbrack",
+	"\\(": "\\left\\lparen",
+	"\\)": "\\right\\rparen",
+	"\\[": "\\left\\lbrack",
+	"\\]": "\\right\\rbrack",
 	"\\{": "\\left\\lbrace",
 	"\\}": "\\right\\rbrace",
 	"\\la": "\\left\\langle",
@@ -34,6 +34,6 @@ export default {
 	"\\card": "\\operatorname{card}",
 	"\\na": "{\\it N}_{\\rm A}",
 	"\\mr": "{\\it M}_{\\rm r}",
-	"\\rc": "\\mathrm R",
+	"\\pr": "\\mathrm R",
 	"\\vm": "V_{\\mathrm m}"
 }
