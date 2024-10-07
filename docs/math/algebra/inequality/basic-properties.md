@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+description: 介绍等式与不等式的基本性质，并在此基础上进行一些拓展．
+slug: /basic-properties
 ---
 
 # 等式与不等式的基本性质

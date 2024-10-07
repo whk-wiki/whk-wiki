@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 description: 了解集合．
+slug: /set
 ---
 
 # 集合
