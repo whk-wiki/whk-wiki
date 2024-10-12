@@ -184,7 +184,7 @@ $$
 - $A\cap(\complement_UA)=\varnothing$．
 - $\complement_U(\complement_UA)=A$．
 - 若 $A\subseteq B$，则 $\complement_UB\subseteq\complement_UA$（逆否命题）．
-- De Morgan 定律：$\bal&\complement_U(A\cap B)=(\complement_UA)\cup(\complement_UB),\\&\complement_U(A\cup B)=(\complement_UA)\cap(\complement_UB)\eal$．
+- De Morgan 定律：$\bal&\complement_U(A\cap B)=(\complement_UA)\cup(\complement_UB),\\&\complement_U(A\cup B)=(\complement_UA)\cap(\complement_UB)\eal.$
 
 一般地，有 **对偶原理**：若有关集的并、交及补集运算的某一关系式成立，如果将式中的记号
 $$
