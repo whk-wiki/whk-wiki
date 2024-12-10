@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 description: 基本不等式（均值不等式）及其应用．
+slug: /am-gm-inequality
 ---
 
 # 基本不等式
@@ -9,7 +10,7 @@ description: 基本不等式（均值不等式）及其应用．
 
 ## 基本不等式
 
-[前一节](https://whk-wiki.github.io/whk-wiki/math/inequality/basic-properties#%E5%85%B6%E4%BB%96%E6%80%A7%E8%B4%A8)我们提到过一个重要的不等式：对于任意 $a,b\in\R$，有 $a^2+b^2\ge2ab$，当且仅当 $a=b$ 时等号成立．
+[前一节](./basic-properties.md)我们提到过一个重要的不等式：对于任意 $a,b\in\R$，有 $a^2+b^2\ge2ab$，当且仅当 $a=b$ 时等号成立．
 
 特殊地，将 $a,b$ 分别替换为 $\sqrt a,\sqrt b$，其中 $a,b>0$，则可以推出基本不等式．
 
@@ -83,11 +84,11 @@ $$
 
 2. $\lv x+\df1x\rv\ge2$，其中 $x\ne0$，当且仅当 $x=\pm1$ 时等号成立．
    
-3. $\lv\df ba+\df ab\rv\ge2$，其中 $a,b$ 满足 $ab\ne0$，当且仅当 $a=\pm b$ 时等号成立．
+3. $\lv\df ba+\df ab\rv\ge2$，其中 $a,b\in\R$ 满足 $ab\ne0$，当且仅当 $a=\pm b$ 时等号成立．
 
-4. $\lv ax+\df bx\rv\ge2\sqrt{ab}$，其中 $x\ne0$，当且仅当 $x=\pm\sqrt{\df ba}$ 时等号成立．
+4. $\lv ax+\df bx\rv\ge2\sqrt{ab}$，其中 $a,b\in\R$ 为常数，$x\ne0$，当且仅当 $x=\pm\sqrt{\df ba}$ 时等号成立．
 
-5. $a^2+b^2+c^2\ge ab+bc+ca$，其中 $a,b,c\in\R$，当且仅当 $a=b=c$ 时等号成立．证明：两边乘 $2$ 后完全平方．
+5. $a^2+b^2+c^2\ge ab+bc+ca$，其中 $a,b,c\in\R$，当且仅当 $a=b=c$ 时等号成立．证明：两边乘 $2$ 后凑成三个完全平方．
 
 ## 均值不等式
 
@@ -106,8 +107,6 @@ $$
 第一个不等号：
 $$
 \bal
-    (a-b)^2&\ge0 \\
-    (a+b)^2&\ge4ab \\
     a+b&\ge2\sqrt{ab} \\
     \fr1{a+b}&\le\fr1{2\sqrt{ab}} \\
     \fr{2ab}{a+b}&\le\sqrt{ab} \\
@@ -183,7 +182,7 @@ x^2+y^2=1+xy\le1+\fr{x^2+y^2}2,
 $$
 解得 $x^2+y^2\le2$，当且仅当 $x=y=\pm1$ 时等号成立．所以 C 正确．
 
-*对于 D，对所给等式配方得 $(x-\df y2)^2+(\df{\sqrt3y}2)^2=1$，使用 **三角换元** 法，设
+*对于 D，对所给等式配方得 $(x-\df y2)^2+(\df{\sqrt3y}2)^2=1$，使用 **三角换元法**，设
 $$
 x-\fr y2=\cos\theta,\df{\sqrt3y}2=\sin\theta,\theta\in\R,
 $$
@@ -191,7 +190,7 @@ $$
 $$
 x=\cos\theta+\fr{\sqrt3}3\sin\theta,y=\fr{2\sqrt3}3\sin\theta,
 $$
-因此 $x^2+y^2=\cos^2\theta+\df53\sin^2\theta+\df{2\sqrt3}3\sin\theta\cos\theta=\df43+\df23\sin(2\theta-\df\pi6)\in[\df23,2]$．所以 D 错误．
+因此 $x^2+y^2=\cos^2\theta+\df53\sin^2\theta+\df{2\sqrt3}3\sin\theta\cos\theta=\df43+\df23\sin(2\theta-\df\pi6)\in[\df23,2]$．所以 D 错误．（有关三角函数的知识见 [?] 节．）
 
 故选 BC．
 
@@ -220,7 +219,7 @@ $$
 \eal
 $$
 
-- 若 $a,b,c,m,n,x,y>0$，其中 $a,b,c,m,n$ 是常数，且 $\df ax+\df by=1$，则
+- 若 $a,b,c,m,n,x,y>0$，其中 $a,b,c,m,n$ 是常数，且 $\df ax+\df by=c$，则
 $$
 \bal
     mx+ny&=\fr1c(mx+ny)(\fr ax+\fr by)\\
@@ -229,7 +228,7 @@ $$
 \eal
 $$
 
-上面的公式可以选择不用记住，只需要记住使用 **常值代换法** 的过程即可．
+上面的公式可以不用记住，记住使用 **常值代换法** 的过程即可．
 
 :::info[例 2.1.1]
 
@@ -274,7 +273,7 @@ $$
     &=4+\fr{3b}{2a}+\fr{2a}b-4\ge2\sqrt3,
 \eal
 $$
-当且仅当 $\df{3b}{2a}=\df{2a}b$，即有序数对 $(x,y)=(0,0)或(\sqrt3+1,\df{6+2\sqrt3}3)或(-\sqrt3+1，\df{6-2\sqrt3}3)$ 时等号成立．
+当且仅当 $\df{3b}{2a}=\df{2a}b$，即有序数对 $(a,b)=(\sqrt3+1,\df{6+2\sqrt3}3)或(-\sqrt3+1，\df{6-2\sqrt3}3)$ 时等号成立．
 
 因此 $\df3{a-1}+\df2{b-2}$ 的最小值为 $2\sqrt3$．
 

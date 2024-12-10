@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 description: 了解集合．
+slug: /set
 ---
 
 # 集合
@@ -52,21 +53,23 @@ $$
 
 注：竖线分隔符也可以用冒号代替．
 
-#### 数学中常用的数集
+#### 一些常见数集的记号
 
 - 自然数集（或非负整数集）：$\N=\{0,1,2,3,\dots\}$．
-- 正数集：$\N^\ast$ 或 $\N_+=\{1,2,3,\dots\}$．
+- 正整数集：$\N^\ast$ 或 $\N_+=\{1,2,3,\dots\}$．
 - 整数集：$\Z=\{\dots,-2,-1,0,1,2,\dots\}$．
-- 有理数集：$\mathbb Q=\{a\in\R\mid a=\df qp,\;p,q\in\Z,(p,q)=1,p>0\}$ （Q 来源于 quotient（商））．
+- 有理数集：$\Q=\{a\in\R\mid a=\df qp,\;p,q\in\Z,(p,q)=1,p>0\}$ （Q 来源于 quotient（商））．
 - 实数集：$\R$．
-- 复数集：$\mathbb C$．
-- 素数集：$\mathbb P=\{2,3,5,7,11,13,17,\dots\}$．
+- 复数集：$\C$．
+- 素数集：$\P=\{2,3,5,7,11,13,17,\dots\}$．
 
-对于 $\N,\Z,\mathbb Q,\R,\mathbb C$，右上角加星号表示去零．
+对于 $\N,\Z,\Q,\R,\C$，右上角加星号表示去零．
 
-注：对于 $\N,\Z,\mathbb Q,\R$，右下角标可以用于表示对范围的限制，如 $\R_{\ge0}\coloneqq\{x\in\R\mid x\ge0\}$．（高中考试不要使用！）
+对于 $\N,\Z,\Q,\R$，右下角加正号「$+$」表示范围为正．
 
-注：在印刷体中，一般使用粗体 $\mathbf N$ 或黑板粗体 $\N$ 表示数集，如人教版高中数学教材采用的就是正粗体 $\mathbf N$．在手写体中，一般应该使用黑板粗体．
+注：对于 $\N,\Z,\Q,\R$，右下角标可以用于表示对范围的限制，如 $\R_{\ge0}\coloneqq\{x\in\R\mid x\ge0\}$，$\N_k=\{0,1,\dots,k-1\}$．（考试中请尽量不要使用．）
+
+注：在印刷体中，一般使用粗体 $\mathbf N$ 或黑板粗体 $\N$ 表示数集，如 ISO 80000-2 标准首选采用的就是正粗体 $\mathbf N$．在手写体中，一般应该使用黑板粗体．为了美观，本文档采用黑板粗体．
 
 ### 图示法
 
@@ -92,7 +95,7 @@ $$
 
 另外，用区间的并表示「或」，如 $(-\infty,1)\cup[\df32,+\infty)=\{x\in\R\mid x<1\ 或\ x\ge\df32\}$，$(-\infty,2)\cup(2,+\infty)=\{x\in\R\mid x\ne2\}$．
 
-注：正无穷 $+\infty$ 中的正号 $+$ 有时可以省略．
+注：正无穷 $+\infty$ 中的正号 $+$ 有时会被省略，但有时只用 $\infty$ 又表示 $\pm\infty$．具体意义须结合上下文理解．
 
 ## 集合间的基本关系
 
@@ -102,7 +105,7 @@ $$
 
 一般地，如果集合 $A$ 的任何一个元素都是集合 $B$ 的元素，同时集合 $B$ 的任何一个元素都是集合 $A$ 的元素，那么集合 $A$ 与集合 $B$ 相等，记作 $A=B$．也就是说，
 $$
-A\subseteq B \operatorname{and} B\subseteq A\iff A=B.
+A\subseteq B\;\text{且}\;B\subseteq A\iff A=B.
 $$
 
 如果集合 $A\subseteq B$，但存在元素 $a\in A$，且 $a\notin B$，就称集合 $A$ 是集合 $B$ 的 **真子集**，记作 $A\subsetneqq B$ 或 $B\supsetneqq A$．
@@ -118,95 +121,86 @@ $$
 
 注：空集也可以表示为 $\{\}$．
 
+注：为了叙述清晰，一般将以集合为元素的集合称为 **集族**．
+
 ## 集合的基本运算
 
-### 并集
+### 并集、交集、补集的定义
 
 一般地，由所有属于集合 $A$ *或*属于集合 $B$ 的元素组成的集合，称为集合 $A$ 与 $B$ 的 **并集**，记作 $A\cup B$（读作「$A$ 并 $B$」），即
 
 $$
-A\cup B\coloneqq\{x\mid x\in A \operatorname{or} x\in B\}.
+A\cup B\coloneqq\{x\mid x\in A\;\text{或}\;x\in B\}.
 $$
-
-性质如下：
-
-- $A\cup\varnothing=A$．
-- $A\cup A=A$．
-- $A\cup B=B\cup A$．
-- $A\cup B=A\iff B\subseteq A$．
-
-### 交集
 
 一般地，由所有属于集合 $A$ *且*属于集合 $B$ 的元素组成的集合，称为集合 $A$ 与 $B$ 的 **交集**，记作 $A\cap B$（读作「$A$ 交 $B$」），即
 
 $$
-A\cap B\coloneqq\{x\mid x\in A \operatorname{and} x\in B\}.
+A\cap B\coloneqq\{x\mid x\in A\;\text{且}\;x\in B\}.
 $$
 
-性质如下：
+若集合 $A,B$ 满足 $A\cap B=\varnothing$，则称 $A$ 与 $B$ **不相交**．
 
-- $A\cap\varnothing=\varnothing$．
-- $A\cap A=A$．
-- $A\cap B=B\cap A$．
-- $A\cap B=A\iff A\subseteq B$．
-
-一系列集合的并集或交集可以用大运算符表示，其使用方法与求和符号相同：
+注：一系列集合的并集或交集可以用大运算符表示，其使用方法与求和符号相同：设集族 $\mathcal F=\{A_1,A_2,\dots,A_n\}$，则定义记号
 
 $$
 \bal
-\bigcup_{i=1}^nA_i=A_1\cup\dots\cup A_n. \\
-\bigcap_{i=1}^nA_i=A_1\cap\dots\cap A_n.
+\bigcup_{\mathcal F}=\bigcup_{i=1}^nA_i=A_1\cup\dots\cup A_n. \\
+\bigcap_{\mathcal F}=\bigcap_{i=1}^nA_i=A_1\cap\dots\cap A_n.
 \eal
 $$
-
-### 补集
 
 一般地，如果一个集合含有所研究问题中涉及的所有元素，那么就称这个集合为 **全集**，通常记作 $U$．通常也把给定的集合作为全集．
 
 对于一个集合 $A$，由全集 $U$ 中不属于集合 $A$ 的所有元素组成的集合称为集合 $A$ 相对于全集 $U$ 的 **补集**，简称为集合 $A$ 的补集，记作 $\complement_UA$，即
 
 $$
-\complement_UA\coloneqq\{x \mid x\in U \mathrm{\ and\ } x\notin A\}.
+\complement_UA\coloneqq\{x \mid x\in U\;\text{且}\;x\notin A\}.
 $$
 
-性质如下：
-
-- $A\cup(\complement_UA)=U$．
-
-- $A\cap(\complement_UA)=\varnothing$．
-
-- $\complement_U\varnothing=U$．
-
-- $\complement_UU=\varnothing$．
-
-- $\complement_U(\complement_UA)=A$（对合律）．
-
-- 若 $A\subseteq B$，则 $\complement_UB\subseteq\complement_UA$（逆否命题）．
-
-- De Morgan 定律：
-
-    $\complement_U(A\cap B)=(\complement_UA)\cup(\complement_UB)$．
-
-    $\complement_U(A\cup B)=(\complement_UA)\cap(\complement_UB)$．
-
-注：如果从上下文看，所讨论的全集 $U$ 是显然的，那么 $U$ 可以省略，即将 $A$ 的补集表示为 $\complement A$．
+如果从上下文看，所讨论的全集 $U$ 是显然的，那么 $U$ 可以省略，即将 $A$ 的补集表示为 $\complement A$．
 
 注：补集 $\complement_AB$ 与差集 $A\setminus B$ 的定义相同，都表示由集合 $A$ 中不属于集合 $B$ 的所有元素构成的集合，但补集一般用于 $B\subseteq A$ 的情形，而差集则不限制．（差集不属于高中范围．）
+
+注：补集 $\complement_UB$ 也可以简洁地记作 $B^C$ 或 $\overline B$．
+
+### 并集、交集、补集的性质
+
+集合的并与交运算具有下列一些性质：
+
+- 交换律：$A\cup B=B\cup A$，$A\cap B=B\cap A$．
+- 结合律：$(A\cup B)\cup C=A\cup(B\cup C)$，$(A\cap B)\cap C=A\cap(B\cap C)$．
+- 幂等律：$A\cup A=A$，$A\cap A=A$．
+- 分配律：$A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$，$A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$．
+- 吸收律：$A\cup(A\cap B)=A$，$A\cap(A\cup B)=A$．
+- $A\cup\varnothing=A$，$A\cap\varnothing=\varnothing$．
+- $A\cup B=A\iff B\subseteq A$，$A\cap B=A\iff A\subseteq B$．
+
+另外，有补集的性质如下：
+
+- $\complement_U\varnothing=U$．
+- $\complement_UU=\varnothing$．
+- $A\cup(\complement_UA)=U$．
+- $A\cap(\complement_UA)=\varnothing$．
+- $\complement_U(\complement_UA)=A$．
+- 若 $A\subseteq B$，则 $\complement_UB\subseteq\complement_UA$（逆否命题）．
+- De Morgan 定律：$\bal&\complement_U(A\cap B)=(\complement_UA)\cup(\complement_UB),\\&\complement_U(A\cup B)=(\complement_UA)\cap(\complement_UB)\eal.$
+
+一般地，有 **对偶原理**：若有关集的并、交及补集运算的某一关系式成立，如果将式中的记号
+$$
+\cup,\cap,\subseteq,\supseteq
+$$
+分别换成
+$$
+\cap,\cup,\supseteq,\subseteq,
+$$
+等号保持不变，并将式中每个集换成它的补集，由此得到的关系式一定成立．
 
 ## 集合中的元素个数
 
 用 $\card(A)$ 表示集合 $A$ 的基数（cardinality），即有限集合 $A$ 中元素的个数．
 
 注：也可以表示为 $|A|$，但此符号也同时表示实数的绝对值、复数的模以及向量的长度等．
-
-## 集合的子集个数
-
-若集合 $A$ 中含有 $n$（$n\in\N$）个元素，则
-
-- 它的子集个数为 $2^n$；
-- 它的真子集个数为 $2^n-1$；
-- 它的非空子集个数为 $2^n-1$；
-- 它的非空真子集个数为 $2^n-2$（$n\ge1$）．
 
 ### 容斥原理
 
@@ -222,6 +216,36 @@ $$
 
 $$
 |A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|.
+$$
+
+## 集合的子集个数
+
+若集合 $A$ 中含有 $n$（$n\in\N$）个元素，则
+
+- 它的子集个数为 $2^n$；
+- 它的真子集个数为 $2^n-1$；
+- 它的非空子集个数为 $2^n-1$；
+- 它的非空真子集个数为 $2^n-2$（$n\ge1$）．
+
+注：因此集合 $A$ 的所有子集构成的集族常记为 $2^A$，称作集合 $A$ 的幂集．
+
+## *数集的最大数与最小数
+
+虽然未在教材中定义，但这两个记号在考试中经常出现．
+
+设 $A$ 为数集，若数 $M\in A$ 满足对于任意 $x\in A$，有 $M\ge x$，则称 $M$ 为数集 $A$ 的最大数（maximum），记为
+$$
+M=\max A.
+$$
+
+类似地，若数 $m\in A$ 满足对于任意 $x\in A$，有 $m\le x$，则称 $m$ 为数集 $A$ 的最小数（minimum），记为
+$$
+m=\min A.
+$$
+
+例如，定义在 $(0,+\infty)$ 上的函数
+$$
+f(x)=\max\{1,x,\fr{x^2}2\}=\bcs1,&0<x\le1,\\x,&1<x\le2,\\\df{x^2}2,&x>2.\ecs
 $$
 
 ## 有关集合的常见考点
@@ -299,7 +323,7 @@ $\exists\,x\in C,x\in A$ 为假命题，则 $\forall\,x\in C,x\notin A$ 为真�
 
 :::info[例 3.1]
 
-设 $P,Q$ 是两个集合，定义集合 $P\setminus Q=\{x\mid x\in P \operatorname{and} x\notin Q\}$，如果 $P=\{x\mid1<2^x<4\}$，$Q=\{y\mid y=2+\sin x,x\in\R\}$，请求出 $P\setminus Q$．
+设 $P,Q$ 是两个集合，定义集合 $P\setminus Q=\{x\mid x\in P\;\text{且}\;x\notin Q\}$，如果 $P=\{x\mid1<2^x<4\}$，$Q=\{y\mid y=2+\sin x,x\in\R\}$，请求出 $P\setminus Q$．
 
 :::
 
@@ -352,7 +376,7 @@ D 选项，由于整数 $n\ge1$，$\df n{n+1}=1-\df1{n+1}\ge\df12$，则其不�
 
 :::info[例 3.3]
 
-**（多选题）** 指示函数是一个重要的数学函数，通常用来表示某个 条件的成立情况．已知 $U$ 为全集且元素个数有限，对于 $U$ 的任意一个子集 $S$，定义其指示函数 $1_S(x)=\bcs1,&x\in S,\\0,&x\in\complement_US.\ecs$ 若 $A,B,C\subseteq U$，则（　　）
+**（多选题）** 指示函数是一个重要的数学函数，通常用来表示某个条件的成立情况．已知 $U$ 为全集且元素个数有限，对于 $U$ 的任意一个子集 $S$，定义其指示函数 $1_S(x)=\bcs1,&x\in S,\\0,&x\in\complement_US.\ecs$ 若 $A,B,C\subseteq U$，则（　　）
 
 注：$\sum_{x\in G}f(x)$ 表示集合 $G$ 中所有元素 $x$ 所对应的函数值 $f(x)$ 之和（其中 $G$ 是 $f$ 定义域的子集）．
 

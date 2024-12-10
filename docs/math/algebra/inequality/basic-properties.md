@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+description: 介绍等式与不等式的基本性质，并在此基础上进行一些拓展．
+slug: /basic-properties
 ---
 
 # 等式与不等式的基本性质
@@ -126,7 +128,7 @@ $$
 
 :::tip[例 2 解答 2（作商法）]
 
-首先有 $p=\df{a^3+b^3}{ab}=\df{(a+b)(a^2-ab+b^2)}{ab}$，又 $a^2+b^2\ge2ab$（参见上文[不等式的其他性质](https://whk-wiki.github.io/whk-wiki/math/inequality/basic-properties#%E5%85%B6%E4%BB%96%E6%80%A7%E8%B4%A8)），因此
+首先有 $p=\df{a^3+b^3}{ab}=\df{(a+b)(a^2-ab+b^2)}{ab}$，又 $a^2+b^2\ge2ab$（参见上文[不等式的其他性质](./basic-properties.md#其他性质)），因此
 
 $$
 \df pq=\df{a^2-ab+b^2}{ab}\ge\df{2ab-ab}{ab}=1,
@@ -160,7 +162,7 @@ $$
 
 :::info[例 4]
 
-在锐角三角形 $ABC$ 中，求证：
+在锐角 $\triangle ABC$ 中，求证：
 
 （1）$\df A{B+C}+\df B{C+A}+\df C{A+B}<2$；
 
@@ -185,7 +187,6 @@ $$
     &=\fr{2A+2B+2C}{A+B+C}=2.
 \eal
 $$
-证毕．
 
 （2）考虑将分母转化为 $1+a+b$ 以合并不等式右边的两个分式．可以猜想与三角形的三边关系有关．在锐角 $\triangle ABC$ 中，$c<a+b$，所以 $a+b-c>0$，由糖水不等式有
 $$
@@ -194,6 +195,5 @@ $$
     &=\fr a{1+a+b}+\fr b{1+a+b}<\fr a{1+a}+\fr b{1+b}.
 \eal
 $$
-证毕．
 
 :::
