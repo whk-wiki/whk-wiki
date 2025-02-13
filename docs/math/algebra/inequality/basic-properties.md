@@ -51,6 +51,12 @@ slug: /basic-properties
 
 即真分数越加越大，假分数越加越小．可以用作差法证明．
 
+### 分式不等式的解法
+
+- $\df{f(x)}{g(x)}>0(<0)\iff f(x)g(x)>0(<0)$．
+
+- $\df(f(x)){g(x)}\ge0(\le0)\iff\bcs f(x)g(x)\ge0(\le0),\\g(x)\ne0.\ecs$
+
 ### 其他性质
 
 - $a<b,c<d \implies a-d<b-c$．
