@@ -40,5 +40,13 @@ export default {
 	"\\card": "\\operatorname{card}",
 	"\\na": "N_{\\mathrm A}",
 	"\\mr": "M_{\\mathrm r}",
-	"\\vm": "V_{\\mathrm m}"
+	"\\vm": "V_{\\mathrm m}",
+	"\\degree": "^\\circ",
+	"\\al": "\\alpha",
+	"\\be": "\\beta",
+	"\\ga": "\\gamma",
+	"\\de": "\\delta",
+	"\\th": "\\theta",
+	"\\ph": "\\varphi",
+	"\\om": "\\omega"
 }
