@@ -167,7 +167,7 @@ $$
 
 注：补集 $\complement_UB$ 也可以简洁地记作 $B^{\mathrm C}$（$B^\complement$）、$B'$ 或 $\overline B$．
 
-<img src="./assets/set/set-operations.png" alt="set-operations" style="zoom: 40%;" />
+![set-operations.png](./assets/set/set-operations.png)
 
 ### 并集、交集、补集的性质
 
@@ -340,10 +340,10 @@ $P=(0,2)$，$Q=[1,3]$．根据定义，$P\setminus Q$ 就是从 $P$ 中去掉 $P
 
 **（多选题）** 设集合 $X$ 是实数集 $\R$ 的子集，如果 $x_0\in\R$ 满足对任意的 $a>0$，都存在 $x\in X$，使得 $0<|x-x_0|<a$，则称 $x_0$ 为集合 $X$ 的聚点．则下列集合中是以 $0$​ 为聚点的有（　　）
 
-- A. $\{x\mid x\in\R,x\ne0\}$ 
-- B. $\{x\mid x\in\Z,x\ne0\}$ 
-- C. $\{x\mid x=\df1n,n\in\N^\ast\}$ 
-- D. $\{x\mid x=\df n{n+1},n\in\N^\ast\}$​ 
+- A. $\{x\mid x\in\R,x\ne0\}$
+- B. $\{x\mid x\in\Z,x\ne0\}$
+- C. $\{x\mid x=\df1n,n\in\N^\ast\}$
+- D. $\{x\mid x=\df n{n+1},n\in\N^\ast\}$​
 
 :::
 
@@ -383,10 +383,10 @@ D 选项，由于正整数 $n\ge1$，$\df n{n+1}=1-\df1{n+1}\ge\df12$，则其�
 
 注：$\sum_{x\in G}f(x)$ 表示集合 $G$ 中所有元素 $x$ 所对应的函数值 $f(x)$ 之和（其中 $G$ 是 $f$ 定义域的子集）．
 
-- A. $\sum_{x\in A}1_A(x)<\sum_{x\in U}1_A(x)$ 
-- B. $1_{A\cap B}(x)\le1_A(x)\le1_{A\cup B}(x)$ 
-- C. $\sum_{x\in U}1_{A\cup B}(x)=\sum_{x\in U}1_A(x)+1_B(x)-1_A(x)1_B(x)$ 
-- D. $\sum_{x\in U}(1-1_A(x))(1-1_B(x))(1-1_C(x))=\sum_{x\in U}1_U(x)-\sum_{x\in U}1_{A\cup B\cup C}(x)$ 
+- A. $\sum_{x\in A}1_A(x)<\sum_{x\in U}1_A(x)$
+- B. $1_{A\cap B}(x)\le1_A(x)\le1_{A\cup B}(x)$
+- C. $\sum_{x\in U}1_{A\cup B}(x)=\sum_{x\in U}1_A(x)+1_B(x)-1_A(x)1_B(x)$
+- D. $\sum_{x\in U}(1-1_A(x))(1-1_B(x))(1-1_C(x))=\sum_{x\in U}1_U(x)-\sum_{x\in U}1_{A\cup B\cup C}(x)$
 
 :::
 
