@@ -107,7 +107,7 @@ $F_1+F_3+\dots+F_{2n-1}=F_{2n}$．
         F_1+F_3+\dots+F_{2n-1}=(F_2-F_0)+(F_4-F_2)+\dots+(F_{2n}-F_{2n-2})=F_{2n}-F_0=F_{2n}.
     $$
   </TabItem>
-<Tabs>
+</Tabs>
 
 :::
 
