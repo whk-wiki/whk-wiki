@@ -3,6 +3,9 @@ sidebar_position: 7
 description: 斐波那契数列的一些常考的性质及证明．
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 斐波那契数列
 
 在模考中，斐波那契（Fibonacci）数列常常作为一种新定义的题型出现．下面整理了一些斐波那契数列的性质，并给出相对易于在考场上推导出来的证明．
@@ -11,10 +14,10 @@ description: 斐波那契数列的一些常考的性质及证明．
 
 定义数列 $\{F_n\}$ 满足
 $$
-F_n=\bcs
-    1,&n=1\mathop{or}n=2,\\
+F_n=\begin{cases}
+    1,&n=1\operatorname{or}n=2,\\
     F_{n-1}+F_{n-2},&n\ge3.
-\ecs
+\end{cases}
 $$
 称此数列为 **斐波那契数列** 或 **兔子数列**，它的前几项为
 $$
@@ -176,9 +179,11 @@ $$
 
 ### 下标有数量关系的性质
 
+以下 $m,n\in\N_+$．
+
 :::info[性质 3.1]
 
-$F_{m-1}F_{n-1}+F_mF_n=F_{m+n-1}$（$m\ge2,n\ge2$，$m,n\in\N_+$）．
+$F_{m-1}F_{n-1}+F_mF_n=F_{m+n-1}$，$m,n\ge2$．
 
 :::
 
@@ -206,7 +211,7 @@ $$
 
 :::info[性质 3.1']
 
-$F_mF_n+F_{m+1}F_{n+1}=F_{m+n+1}$（$m,n\in\N_+$）．
+$F_mF_n+F_{m+1}F_{n+1}=F_{m+n+1}$．
 
 :::
 
@@ -214,31 +219,31 @@ $F_mF_n+F_{m+1}F_{n+1}=F_{m+n+1}$（$m,n\in\N_+$）．
 
 :::info[性质 3.2]
 
-$F_n^2+F_{n+1}^2=F_{2n+1}$（$n\in\N_+$）．
+$F_n^2+F_{n+1}^2=F_{2n+1}$．
 
 :::
 
 :::info[性质 3.3]
 
-$F_{n+1}^2+F_{n-1}^2=F_{2n}$（$n\ge2,n\in\N_+$）．
+$F_{n+1}^2+F_{n-1}^2=F_{2n}$，$n\ge2$．
 
 :::
 
 :::info[性质 3.4]
 
-$\dfrac{F_{2n}}{F_n}=F_{n+1}+F_{n-1}$（$n\ge2,n\in\N_+$）．
+$\dfrac{F_{2n}}{F_n}=F_{n+1}+F_{n-1}$，$n\ge2$．
 
 :::
 
 :::info[性质 3.5]
 
-$F_{2n}=F_n^2+2F_nF_{n-1}$（$n\ge2,n\in\N_+$）．
+$F_{2n}=F_n^2+2F_nF_{n-1}$，$n\ge2$．
 
 :::
 
 :::info[性质 3.6]
 
-$F_{n+1}F_{n-1}-F_n^2=(-1)^n$（$n\ge2,n\in\N_+$）．
+$F_{n+1}F_{n-1}-F_n^2=(-1)^n$，$n\ge2$．
 
 :::
 
