@@ -48,5 +48,7 @@ export default {
 	"\\de": "\\delta",
 	"\\th": "\\theta",
 	"\\ph": "\\varphi",
-	"\\om": "\\omega"
+	"\\om": "\\omega",
+	"\\Re": "\\mathrm{Re}",
+	"\\Im": "\\mathrm{Im}"
 }

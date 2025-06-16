@@ -14,7 +14,7 @@ slug: /set
 - **互异性**，即一个集合中的元素必须互不相同．
 - **无序性**，即集合中元素的排列顺序是无关紧要的．
 
-我们通常用大写拉丁字母 $A,B,C,\dots$ 表示集合，用小写拉丁字母 $a,b,c,\dots$ 表示集合中的元素．
+我们通常用大写拉丁字母 $A,B,C,\cdots$ 表示集合，用小写拉丁字母 $a,b,c,\cdots$ 表示集合中的元素．
 
 如果组成两个集合的所有元素完全相同，则称这两个集合是 **相等** 的，用等号表示．
 
@@ -56,21 +56,21 @@ $$
 
 #### 一些常见数集的记号
 
-- 自然数集（或非负整数集）：$\N=\{0,1,2,3,\dots\}$．
-- 正整数集：$\N^\ast$ 或 $\N_+=\{1,2,3,\dots\}$．
-- 整数集：$\Z=\{\dots,-2,-1,0,1,2,\dots\}$．
+- 自然数集（或非负整数集）：$\N=\{0,1,2,3,\cdots\}$．
+- 正整数集：$\N^\ast$ 或 $\N_+=\{1,2,3,\cdots\}$．
+- 整数集：$\Z=\{\cdots,-2,-1,0,1,2,\cdots\}$．
 - 有理数集：$\Q=\{a\in\R\mid a=\df qp,\;p,q\in\Z,(p,q)=1,p>0\}$ （Q 来源于 quotient（商））．
 - 实数集：$\R$．
 - 复数集：$\C$．
-- 素数集：$\P=\{2,3,5,7,11,13,17,\dots\}$．
+- 素数集：$\P=\{2,3,5,7,11,13,17,\cdots\}$．
 
 对于 $\N,\Z,\Q,\R,\C$，右上角加星号表示去零．
 
 对于 $\N,\Z,\Q,\R$，右下角加正号「$+$」表示范围为正．
 
-注：对于 $\N,\Z,\Q,\R$，右下角标可以用于表示对范围的限制，如 $\R_{\ge0}\coloneqq\{x\in\R\mid x\ge0\}$，$\N_k=\{0,1,\dots,k-1\}$．（考试中请尽量不要使用．）
+*注：对于 $\N,\Z,\Q,\R$，右下角标可以用于表示对范围的限制，如 $\R_{\ge0}\coloneqq\{x\in\R\mid x\ge0\}$，$\N_{<k}\coloneqq\{0,1,\cdots,k-1\}$．（考试中请尽量不要使用．）
 
-注：在印刷体中，一般使用粗体 $\mathbf N$ 或黑板粗体 $\N$ 表示数集，如 ISO 80000-2 标准首选采用的就是正粗体 $\mathbf N$．在手写体中，一般应该使用黑板粗体．为了美观，本文档采用黑板粗体．
+*注：在印刷体中，一般使用粗体 $\mathbf N$ 或黑板粗体 $\N$ 表示数集，如 ISO 80000-2 标准首选采用的就是正粗体 $\mathbf N$．在手写体中，一般应该使用黑板粗体．为了美观，本文档采用黑板粗体．
 
 ### 图示法
 
@@ -144,12 +144,12 @@ $$
 
 若集合 $A,B$ 满足 $A\cap B=\varnothing$，则称 $A$ 与 $B$ **不相交**．
 
-注：一系列集合的并集或交集可以用大运算符表示，其使用方法与求和符号相同：设集族 $\mathcal F=\{A_1,A_2,\dots,A_n\}$，则定义记号
+注：一系列集合的并集或交集可以用大运算符表示，其使用方法与求和符号相同：设集族 $\mathscr F=\{A_1,A_2,\cdots,A_n\}$，则定义记号
 
 $$
 \bal
-\bigcup_{\mathcal F}=\bigcup_{i=1}^nA_i=A_1\cup\dots\cup A_n. \\
-\bigcap_{\mathcal F}=\bigcap_{i=1}^nA_i=A_1\cap\dots\cap A_n.
+\bigcup_{\mathscr F}=\bigcup_{i=1}^nA_i=A_1\cup\dots\cup A_n. \\
+\bigcap_{\mathscr F}=\bigcap_{i=1}^nA_i=A_1\cap\dots\cap A_n.
 \eal
 $$
 
@@ -163,9 +163,9 @@ $$
 
 如果从上下文看，所讨论的全集 $U$ 是显然的，那么 $U$ 可以省略，即将 $A$ 的补集表示为 $\complement A$．
 
-注：补集 $\complement_AB$ 与差集 $A\setminus B$ 的定义相同，都表示由集合 $A$ 中不属于集合 $B$ 的所有元素构成的集合，但补集一般用于 $B\subseteq A$ 的情形，而差集则不限制．（差集不属于高中范围．）
+*注：补集 $\complement_AB$ 与差集 $A\setminus B$ 的定义相同，都表示由集合 $A$ 中不属于集合 $B$ 的所有元素构成的集合，但补集一般用于 $B\subseteq A$ 的情形，而差集则不限制．（差集不属于高中范围．）
 
-注：补集 $\complement_UB$ 也可以简洁地记作 $B^{\mathrm C}$（$B^\complement$）、$B'$ 或 $\overline B$．
+*注：补集 $\complement_UB$ 也可以简洁地记作 $B^{\mathrm C}$、$B'$ 或 $\overline B$．
 
 ![set-operations.png](./assets/set/set-operations.png)
 
@@ -176,7 +176,7 @@ $$
 - 交换律：$A\cup B=B\cup A$，$A\cap B=B\cap A$．
 - 结合律：$(A\cup B)\cup C=A\cup(B\cup C)$，$(A\cap B)\cap C=A\cap(B\cap C)$．
 - 幂等律：$A\cup A=A$，$A\cap A=A$．
-- 分配律：$A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$，$A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$．
+- **分配律**：$A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$，$A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$．
 - 吸收律：$A\cup(A\cap B)=A$，$A\cap(A\cup B)=A$．
 - 单位元：$A\cup\varnothing=A$，$A\cup U=U$；$A\cap\varnothing=\varnothing$，$A\cap U=A$．
 - $A\cup B=A\iff B\subseteq A$，$A\cap B=A\iff A\subseteq B$．
@@ -187,7 +187,7 @@ $$
 - $A\cup(\complement_UA)=U$，$A\cap(\complement_UA)=\varnothing$．
 - $\complement_U(\complement_UA)=A$．
 - 若 $A\subseteq B$，则 $\complement_UB\subseteq\complement_UA$（逆否命题）．
-- De Morgan 定律：$\bal&\complement_U(A\cap B)=(\complement_UA)\cup(\complement_UB),\\&\complement_U(A\cup B)=(\complement_UA)\cap(\complement_UB).\eal$
+- $\bal&\complement_U(A\cap B)=(\complement_UA)\cup(\complement_UB),\\&\complement_U(A\cup B)=(\complement_UA)\cap(\complement_UB),\eal$ 即 $\bal&\overline{A\cap B}=\overline A\cup\overline B,\\&\overline{A\cup B}=\overline A\cap\overline B,\eal$**（德摩根（de Morgan）定律）**．
 
 *一般地，有 **对偶原理**：若有关集的并、交及补集运算的某一关系式成立，如果将式中的记号
 $$
@@ -203,7 +203,7 @@ $$
 
 用 $\card(A)$ 表示集合 $A$ 的基数（cardinality），即有限集合 $A$ 中元素的个数．
 
-注：也可以表示为 $|A|$，但此符号也同时表示实数的绝对值、复数的模以及向量的长度等．
+*注：也可以表示为 $|A|$，但此符号也同时表示实数的绝对值、复数的模以及向量的长度等．
 
 ### 容斥原理
 
@@ -230,7 +230,7 @@ $$
 - 它的非空子集个数为 $2^n-1$；
 - 它的非空真子集个数为 $2^n-2$（$n\ge1$）．
 
-注：因此集合 $A$ 的所有子集构成的集族常记为 $2^A$，称作集合 $A$ 的幂集．
+*注：因此集合 $A$ 的所有子集构成的集族常记为 $2^A$，称作集合 $A$ 的幂集．
 
 ## *数集的最大数与最小数
 
@@ -265,19 +265,20 @@ $$
 
 :::tip[例 1.1 解答]
 
-首先 $a\ne0$，那么 $a+b=0$．
+首先 $a\ne0$，那么由两集合中元素的一一对应关系，可知 $a+b=0$．接下来分两种情况：
 
-若 $\df ba=1$，则 $b=a$，那么 $a=b=2a=0$，与题意矛盾，舍去．
+- 若 $1=\df ba$，$a=b$，由于 $a+b=0$，故 $a=0$，矛盾．
+- 若 $1=b$，$a=\df ba$，可知 $a=-1$，因此左侧集合为 $\{1,0,-1\}$，右侧集合为 $\{0,-1,1\}$，成立．
 
-若 $b=1$，则 $a=-1$．因此左侧集合为 $\{1,0,-1\}$，右侧集合为 $\{0,-1,1\}$，成立．
-
-综上所述，$a=-1,b=1$，则 $a^{2023}+b^{2024}=0$．
+综上所述，$a=-1,b=1$，因此 $a^{2023}+b^{2024}=0$．
 
 :::
 
 ### 集合的基本关系与运算
 
-这部分题目经常与函数的定义域、值域结合．$\{x\mid y=f(x)\}$ 表示函数 $f(x)$ 的定义域，$\{y\mid y=f(x)\}$ 表示函数 $f(x)$ 的值域，注意看清题干．
+这部分题目经常与函数的定义域、值域结合．
+
+$\{x\mid y=f(x)\}$ 表示函数 $f(x)$ 的定义域，$\{y\mid y=f(x)\}$ 表示函数 $f(x)$ 的值域．
 
 :::info[例 2.1]
 
@@ -300,13 +301,15 @@ $A=[2^{1-1},2^{2-1}]=[1,2],B=\{x\mid 2-x>0\}=(-\infty,2)$．因此 C 选项正�
 
 这部分题目也经常与解不等式相结合，例如，将区间的包含关系转化为端点之间的不等关系．
 
+注意，可能需要讨论 **集合 $C$ 为空集** 的情况．
+
 :::info[例 2.2]
 
 已知集合 $A=\{x\mid-1\le x\le4\}$，$C=\{x\mid 2m<x<m+1\}$．若 $\exists\,x\in C,x\in A$ 为假命题，求实数 $m$​ 的取值范围．
 
 :::
 
-有关命题的知识，参见[基本逻辑](./fol.md)部分．对于含参的连不等式，注意不要忘了讨论 **集合 $C$ 为空集** 的情况．
+有关命题的知识，参见[基本逻辑](./fol.md)部分．
 
 :::tip[例 2.2 解答]
 
@@ -347,7 +350,7 @@ $P=(0,2)$，$Q=[1,3]$．根据定义，$P\setminus Q$ 就是从 $P$ 中去掉 $P
 
 :::
 
-这道题的思想常应用于证明集合的有界性，以及对极限的严谨定义．
+这道题的思想在高等数学中应用于证明集合的有界性，以及对极限的严谨定义．
 
 ::::tip[例 3.2 解答]
 
@@ -367,7 +370,7 @@ D 选项，由于正整数 $n\ge1$，$\df n{n+1}=1-\df1{n+1}\ge\df12$，则其�
 
 对于 B，取 $a=\df12$，则不存在集合中的元素 $x$ 使得 $|x-0|=|x|<a$​．
 
-对于 C，对任意的 $a$，取 $n=\lc\df1a\rc+1$，则 $|x-0|=\lv\df1{\lc1/a\rc+1}\rv<a$，满足定义．
+对于 C，对任意（小）的 $a$，取 $n=\lc\df1a\rc+1$，则 $|x-0|=\lv\df1{\lc1/a\rc+1}\rv<a$，满足定义．
 
 对于 D，对任意 $n\in\N^\ast$，有 $x=\df n{n+1}\ge\df12$，取 $a=\df12$，则不存在 $n\in\N^\ast$ 所对应的 $x=\df n{n+1}$ 使得 $|x-0|=|x|<a$．
 

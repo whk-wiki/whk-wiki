@@ -38,7 +38,7 @@ $$
 
 ![弧度的定义](./assets/radius.png)
 
-一般地，在半径为 $r$ 的圆中，设弧长为 $l$ 的弧所对的圆心角为 $\pu{\al rad}$，则
+一般地，在半径为 $r$ 的圆中，设弧长为 $l$ 的弧所对的圆心角为 $\pu{\al\, rad}$，则
 $$
 |\al|=\fr lr.
 $$
@@ -47,7 +47,7 @@ $$
 S=\fr12lr=\fr12|\al|r^2.
 $$
 
-根据 $180\degree=\pu{\pi rad}$ 可以进行角度与弧度的换算，设 $a\degree=\al$，则
+根据 $180\degree=\pu{\pi\, rad}$ 可以进行角度与弧度的换算，设 $a\degree=\al$，则
 $$
 \bal
     a\degree&=\al\times\fr{180\degree}\pi,\\
@@ -109,6 +109,8 @@ $$
 |  终边在 $y$ 轴非负半轴   |        $\al=\df\pi2$        |                   $1$                   |                   $0$                   |                            无定义                            |
 |  终边在 $x$ 轴非正半轴   |           $\al=\pi$            |                   $0$                   |                  $-1$                   |                             $0$                              |
 |  终边在 $y$ 轴非正半轴   |      $\al=\df{3\pi}2$       |                  $-1$                   |                   $0$                   |                            无定义                            |
+
+可以简记为「**CAST**」，即在第四、一、二、三象限为正的三角函数分别为 $\text{{\color{red}C}os,“{\color{red}A}ll”,{\color{red}S}in,{\color{red}T}an}$．
 
 正弦函数 $y=\sin x$、余弦函数 $y=\cos x$、正切函数 $y=\tan x$ 为高中涉及到的三角函数．
 
