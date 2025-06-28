@@ -91,7 +91,7 @@ $$
 整理得：
 
 $$
-\left\{
+\left\lbrace
 \begin{aligned}
 &v=\sqrt{\frac{GM}r}\\
 &\omega=\sqrt{\frac{GM}{r^3}}\\
