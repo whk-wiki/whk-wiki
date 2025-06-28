@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-description: 开普勒定律、万有引力定律与一些常见数据
+description: 介绍了开普勒定律、万有引力定律与一些常见数据。
 ---
 
 # 万有引力和宇宙航行
