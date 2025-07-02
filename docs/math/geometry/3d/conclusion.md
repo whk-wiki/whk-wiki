@@ -23,7 +23,7 @@
       m\subset \alpha \\
       l\parallel m \\
    \end{array}
-   \right\} = l\parallel \alpha
+   \} = l\parallel \alpha
    $$
 
 3. 线面平行的性质定理：
@@ -39,7 +39,7 @@
       l\subset\beta \\
       \alpha \cap\beta=m \\
    \end{array}
-   \right\} = l\parallel m
+   \} = l\parallel m
    $$
    作用：已知线面平行可以求出线线平行：找平面，得交线，出平行。
 
@@ -117,7 +117,7 @@
       l\parallel \beta \\
       m\parallel \beta \\
    \end{array}
-   \right\} = \alpha \parallel \beta
+   \} = \alpha \parallel \beta
    $$
 2. 性质定理：
 
@@ -131,7 +131,7 @@
       \alpha \cap \gamma =l \\
       \beta \cap \gamma =m \\
    \end{array}
-   \right\} = l \parallel m
+   \} = l \parallel m
    $$
    作用：已知面面平行可以推出线线平行：找平面，得交线，出平行。
 
@@ -205,7 +205,7 @@
       l \perp \alpha \\
       m\perp \alpha \\
    \end{array}
-   \right\} = l \parallel m
+   \} = l \parallel m
    $$
 5. 已知一个棱锥两条棱 $PA$ 和 $PB$ 相等，则从顶点 $P$ 做高 $PO$，那么有 $OA=OB$。由于 $OA$ 和 $OB$ 可以看做是 $PA$ 和 $PB$ 在底面上的投影，所以有**斜线相等，投影相等**。
 
@@ -224,7 +224,7 @@
       l \subset \alpha \\
       l \perp \beta \\
    \end{array}
-   \right\} = \alpha \perp \beta
+   \} = \alpha \perp \beta
    $$
    找垂线：先找**交线的垂线**。若交线不好找，可以找到平面的关键直线然后考虑该直线与另一个平面是否垂直。
 
@@ -241,7 +241,7 @@
       l\subset \alpha \\
       l\perp m \\
    \end{array}
-   \right\} = l\perp \beta
+   \} = l\perp \beta
    $$
    使用该定理的步骤：先找**交线**，再作**交线的垂线**，得**线面垂直**。
 
