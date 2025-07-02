@@ -35,7 +35,7 @@ description: 硫单质、硫酸和二氧化硫的性质。
 ### 化学性质（浓）
 
 - 难挥发性：
-  - 实验室制氯化氢：$\rm{NaCl+H_2SO_4(浓)\xlongequal{微热}NaHSO_4+HCl\uparrow}$
+  - 实验室制氯化氢：$\rm{NaCl+H_2SO_4(浓)\xlongequal{\triangle}NaHSO_4+HCl\uparrow}$
 
 - 强酸性：
   - 实验室制二氧化硫：$\rm{Na_2SO_3+H_2SO_4(70\%浓)=Na_2SO_4+SO_2\uparrow+H_2O}$
