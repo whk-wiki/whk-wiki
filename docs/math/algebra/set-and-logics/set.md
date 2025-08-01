@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 description: 了解集合．
-slug: /set
 ---
 
 # 集合
@@ -142,7 +141,7 @@ $$
 
 若集合 $A,B$ 满足 $A\cap B=\varnothing$，则称 $A$ 与 $B$ **不相交**．
 
-*注：一系列集合的并集或交集可以用大运算符表示，其使用方法与[求和符号](./basics.md)相同：设集族 $\mathscr F=\{A_1,A_2,\cdots,A_n\}$，则定义记号
+*注：一系列集合的并集或交集可以用大运算符表示，其使用方法与[累加符号](./pre.md)相同：设集族 $\mathscr F=\{A_1,A_2,\cdots,A_n\}$，则定义记号
 
 $$
 \bal
@@ -244,7 +243,8 @@ $$
 m=\min A.
 $$
 
-例如，定义在 $(0,+\infty)$ 上的[函数](../function-basics/function.md)
+例如，定义在 $(0,+\infty)$ 上的函数
+
 $$
 f(x)=\max\{1,x,\fr{x^2}2\}=\bcs1,&0<x\le1,\\x,&1<x\le2,\\\df{x^2}2,&x>2.\ecs
 $$

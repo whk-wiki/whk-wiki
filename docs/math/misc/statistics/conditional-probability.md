@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 description: 介绍条件概率、乘法公式、全概率公式、*贝叶斯公式．
-slug: /conditional-probability
 ---
 
 # 条件概率
