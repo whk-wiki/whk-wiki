@@ -307,8 +307,6 @@ $A=[2^{1-1},2^{2-1}]=[1,2],B=\{x\mid 2-x>0\}=(-\infty,2)$．因此 C 选项正�
 
 :::
 
-有关命题的知识，参见[基本逻辑](./fol.md)部分．
-
 :::tip[例 2.2 解答]
 
 $\exists\,x\in C,x\in A$ 为假命题，则 $\forall\,x\in C,x\notin A$ 为真命题，即 $C\cap A=\varnothing$．
