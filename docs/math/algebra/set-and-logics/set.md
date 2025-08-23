@@ -91,9 +91,9 @@ $$
 
 总之，我们用方括号表示包含端点，圆括号表示不包含端点．正、负无穷一般用圆括号．
 
-两端包含端点的称为 **闭区间**，两端不包含端点的称为 **开区间**，一端包含一端不包含的称为 **半开半闭区间**．
+两端包含端点的称为 **闭区间**，两端不包含端点的称为 **开区间**，一端包含、一端不包含的称为 **半开半闭区间**．
 
-另外，用区间的并表示「或」，如 $(-\infty,1)\cup[\df32,+\infty)=\{x\in\R\mid x<1\ 或\ x\ge\df32\}$，$(-\infty,2)\cup(2,+\infty)=\{x\in\R\mid x\ne2\}$．
+另外，用区间的并表示「或」，如 $(-\infty,1)\cup\left[\df32,+\infty\right)=\left\{x\in\R\mid x<1\ 或\ x\ge\df32\right\}$，$(-\infty,2)\cup(2,+\infty)=\{x\in\R\mid x\ne2\}$．
 
 注：正无穷 $+\infty$ 中的正号 $+$ 有时会被省略，但有时只用 $\infty$ 又表示 $\pm\infty$．具体意义须结合上下文理解．
 
@@ -117,7 +117,7 @@ $$
 - （自反性）任何一个集合是它本身的子集，即 $A\subseteq A$．
 - （传递性）对于集合 $A,B,C$，若 $A\subseteq B$ 且 $B\subseteq C$，则 $A\subseteq C$．
 
-注：课本中用「$\subseteq$」和「$\subsetneqq$」分别表示子集和真子集，而有些人用「$\subseteq$」和「$\subset$」表示，还有些人用「$\subset$」和「$\subsetneqq$」表示．因此，对于一篇文章，应注意明确其使用的表示方式．
+注：高中课本中用「$\subseteq$」和「$\subsetneqq$」分别表示子集和真子集，而有些人用「$\subseteq$」和「$\subset$」表示，还有些人用「$\subset$」和「$\subsetneqq$」表示．因此，对于一篇文章，应注意明确其使用的表示方式．本文档的表示方式与高中课本统一．
 
 注：空集也可以表示为 $\{\}$．
 
@@ -145,8 +145,8 @@ $$
 
 $$
 \bal
-\bigcup_{\mathscr F}=\bigcup_{i=1}^nA_i=A_1\cup\dots\cup A_n. \\
-\bigcap_{\mathscr F}=\bigcap_{i=1}^nA_i=A_1\cap\dots\cap A_n.
+\bigcup_{\mathscr F}A_i=\bigcup_{i=1}^nA_i=A_1\cup\dots\cup A_n. \\
+\bigcap_{\mathscr F}A_i=\bigcap_{i=1}^nA_i=A_1\cap\dots\cap A_n.
 \eal
 $$
 
@@ -162,7 +162,7 @@ $$
 
 *注：补集 $\complement_AB$ 与差集 $A\setminus B$ 的定义相同，都表示由集合 $A$ 中不属于集合 $B$ 的所有元素构成的集合，但补集一般用于 $B\subseteq A$ 的情形，而差集则不限制．（差集不属于高中范围．）
 
-*注：补集 $\complement_UB$ 也可以简洁地记作 $B^{\mathrm C}$、$B'$ 或 $\overline B$．
+*注：补集 $\complement B$ 也可以简洁地记作 $B^{\mathrm C}$、$B'$ 或 $\overline B$．
 
 ![set-operations.png](./assets/set/set-operations.png)
 
@@ -176,7 +176,7 @@ $$
 - **分配律**：$A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$，$A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$．
 - 吸收律：$A\cup(A\cap B)=A$，$A\cap(A\cup B)=A$．
 - 单位元：$A\cup\varnothing=A$，$A\cup U=U$；$A\cap\varnothing=\varnothing$，$A\cap U=A$．
-- $A\cup B=A\iff B\subseteq A$，$A\cap B=A\iff A\subseteq B$．
+- $A\cup B=A\iff B\subseteq A$，$A\cap B=A\iff A\subseteq B$**（常作为题目的已知条件）**．
 
 另外，有补集的性质如下：
 
@@ -186,7 +186,7 @@ $$
 - 若 $A\subseteq B$，则 $\complement_UB\subseteq\complement_UA$（逆否命题）．
 - $\bal&\complement_U(A\cap B)=(\complement_UA)\cup(\complement_UB),\\&\complement_U(A\cup B)=(\complement_UA)\cap(\complement_UB),\eal$ 即 $\bal&\overline{A\cap B}=\overline A\cup\overline B,\\&\overline{A\cup B}=\overline A\cap\overline B,\eal$**（德摩根（de Morgan）定律）**．
 
-*一般地，有 **对偶原理**：若有关集的并、交及补集运算的某一关系式成立，如果将式中的记号
+*一般地，有 **对偶原理**：若有关集合的并、交及补集运算的某一关系式成立，如果将式中的记号
 $$
 \cup,\cap,\subseteq,\supseteq
 $$
@@ -194,13 +194,13 @@ $$
 $$
 \cap,\cup,\supseteq,\subseteq,
 $$
-等号保持不变，并将式中每个集换成它的补集，由此得到的关系式一定成立．
+等号保持不变，并将式中每个集合换成它的补集，由此得到的关系式一定也成立．
 
 ## 集合中的元素个数
 
 用 $\card(A)$ 表示集合 $A$ 的基数（cardinality），即有限集合 $A$ 中元素的个数．
 
-*注：也可以表示为 $|A|$，但此符号也同时表示实数的绝对值、复数的模以及向量的长度等．
+*注：也可以表示为 $|A|$，但此符号也同时表示实数的绝对值、复数的模以及向量的长度等，注意区分．
 
 ### 容斥原理
 
@@ -246,7 +246,7 @@ $$
 例如，定义在 $(0,+\infty)$ 上的函数
 
 $$
-f(x)=\max\{1,x,\fr{x^2}2\}=\bcs1,&0<x\le1,\\x,&1<x\le2,\\\df{x^2}2,&x>2.\ecs
+f(x)=\max\left\{1,x,\fr{x^2}2\right\}=\bcs1,&0<x\le1,\\x,&1<x\le2,\\\df{x^2}2,&x>2.\ecs
 $$
 
 ## 有关集合的常见考点
@@ -257,7 +257,7 @@ $$
 
 :::info[例 1.1]
 
-设 $a,b\in\R$，集合 $\{1,a+b,a\}=\{0,\df ba,b\}$，求 $a^{2023}+b^{2024}$ 的值．
+设 $a,b\in\R$，集合 $\{1,a+b,a\}=\left\{0,\df ba,b\right\}$，求 $a^{2023}+b^{2024}$ 的值．
 
 :::
 

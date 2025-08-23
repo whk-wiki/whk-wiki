@@ -15,6 +15,8 @@ export default {
 	"\\eal": "\\end{aligned}",
 	"\\bcs": "\\begin{cases}",
 	"\\ecs": "\\end{cases}",
+	"\\bga": "\\begin{gathered}",
+	"\\ega": "\\end{gathered}",
 	"\\df": "\\dfrac",
 	"\\fr": "\\frac",
 	"\\d": "\\mathop{}\\!\\mathrm{d}",
@@ -45,6 +47,7 @@ export default {
 	"\\th": "\\theta",
 	"\\ph": "\\varphi",
 	"\\om": "\\omega",
-	"\\Re": "\\mathrm{Re}",
-	"\\Im": "\\mathrm{Im}"
+	"\\Om": "\\mathit{\\Omega}",
+	"\\Re": "\\operatorname{Re}",
+	"\\Im": "\\operatorname{Im}"
 }

@@ -84,11 +84,9 @@ $$
 
 如下图所示．
 
-![单位圆](./assets/unit-circle.png)
+![单位圆](./assets/unit-circle.png) ![三角函数的定义](./assets/trig-functions.png)
 
-![三角函数的定义](./assets/trig-functions.png)
-
-当终边在 $y$ 轴上时，$x=0$，$\df yx$ 无意义，故 $\tan\al$ 的定义域为 $\{\al\mid\al\ne\df\pi2+k\pi,k\in\Z\}$．
+当终边在 $y$ 轴上时，$x=0$，$\df yx$ 无意义，故 $\tan\al$ 的定义域为 $\left\{\al\mid\al\ne\df\pi2+k\pi,k\in\Z\right\}$．
 
 一般地，设角 $\al$ 的终边与圆心为原点、半径为 $r$ 的圆的交点为 $P(x,y)$，则
 $$
@@ -99,12 +97,12 @@ $$
 
 ![各三角函数在各象限内的符号](./assets/signs_of_trig_in_quadrants.png)
 
-| 象限角 / 轴线角 $\al$ |          $\al$ 的范围          | $\sin\al=\df yr$<br />（$\al\in\R$） | $\cos\al=\df xr$<br />（$\al\in\R$） | $\tan\al=\df yx$<br />（$\al\in\{\al\mid\al\ne\df\pi2+k\pi,k\in\Z\}$） |
+| 象限角 / 轴线角 $\al$ |          $\al$ 的范围          | $\sin\al=\df yr$<br />（$\al\in\R$） | $\cos\al=\df xr$<br />（$\al\in\R$） | $\tan\al=\df yx$<br />（$\al\in\left\{\al\mid\al\ne\df\pi2+k\pi,k\in\Z\right\}$） |
 | :----------------------: | :-------------------------------: | :-------------------------------------: | :-------------------------------------: | :----------------------------------------------------------: |
-|        第一象限角        |    $(0,\df\pi2)$    |                   $+$                   |                   $+$                   |                             $+$                              |
-|        第二象限角        |   $(\df\pi2,\pi)$   |                   $+$                   |                   $-$                   |                             $-$                              |
-|        第三象限角        | $(\pi,\df{3\pi}2)$  |                   $-$                   |                   $-$                   |                             $+$                              |
-|        第四象限角        | $(\df{3\pi}2,2\pi)$ |                   $-$                   |                   $+$                   |                             $-$                              |
+|        第一象限角        |    $\left(0,\df\pi2\right)$    |                   $+$                   |                   $+$                   |                             $+$                              |
+|        第二象限角        |   $\left(\df\pi2,\pi\right)$   |                   $+$                   |                   $-$                   |                             $-$                              |
+|        第三象限角        | $\left(\pi,\df{3\pi}2\right)$  |                   $-$                   |                   $-$                   |                             $+$                              |
+|        第四象限角        | $\left(\df{3\pi}2,2\pi\right)$ |                   $-$                   |                   $+$                   |                             $-$                              |
 |  终边在 $x$ 轴非负半轴   |            $\al=0$             |                   $0$                   |                   $1$                   |                             $0$                              |
 |  终边在 $y$ 轴非负半轴   |        $\al=\df\pi2$        |                   $1$                   |                   $0$                   |                            无定义                            |
 |  终边在 $x$ 轴非正半轴   |           $\al=\pi$            |                   $0$                   |                  $-1$                   |                             $0$                              |
