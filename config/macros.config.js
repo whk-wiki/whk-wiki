@@ -44,6 +44,7 @@ export default {
 	"\\be": "\\beta",
 	"\\ga": "\\gamma",
 	"\\de": "\\delta",
+	"\\ep": "\\varepsilon",
 	"\\th": "\\theta",
 	"\\ph": "\\varphi",
 	"\\om": "\\omega",

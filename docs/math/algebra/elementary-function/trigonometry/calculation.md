@@ -13,7 +13,9 @@ description: 同角三角函数的关系、诱导公式、三角恒等变换．
 
 :::info[三角恒等式]
 
-$\sin^2\al+\cos^2\al=1$．
+$$
+    \sin^2\al+\cos^2\al=1.
+$$
 
 :::
 
@@ -42,7 +44,9 @@ $$
 
 由此，可以将所有含 $\sin\al,\cos\al,\tan\al$ 的式子化成只含有 $\sin\al$ 和 $\cos\al$ 的式子．
 
-*引入余割函数 $y=\csc x=\df1{\sin x}$、正割函数 $y=\sec x=\df1{\cos x}$、余切函数 $y=\cot x=\df1{\tan x}$，有如下完整版公式：
+:::note[*拓展]
+
+引入余割函数 $y=\csc x=\df1{\sin x}$、正割函数 $y=\sec x=\df1{\cos x}$、余切函数 $y=\cot x=\df1{\tan x}$，有如下完整版公式：
 
 1. 平方关系：
    $$
@@ -63,6 +67,8 @@ $$
 记忆方法：**平方看三角，乘积看中间，倒数看对角线．**
 
 ![同角三角函数的关系](./assets/same_angle.png)
+
+:::
 
 ## 诱导公式
 
@@ -112,8 +118,14 @@ $\sin\left(\df\pi2-\al\right)=\cos\al$，$\cos\left(\df\pi2-\al\right)=\sin\al$�
 3. 「符号看象限」：将 $\al$ **旋转** 到自变量 $k\df\pi2\pm\al$ 的位置，看 **原函数名** 在当前的象限是正值还是负值，添加正负号．
 
 例如：
-- $\cos\left(\pi-\al\right)$：$k=2$ 为偶数，故结果为 $\cos$；将第一象限角 $\al$ 先对称到 $-\al$，再逆时针旋转 $\pi\,\mathrm{rad}$，最终落在第二象限，由于 $\cos$ 在第二象限为负值，所以加负号；因此，最终结果为 $-\cos\al$．
-- $\sin\left(\df{3\pi}2+\al\right)$：$k=3$ 为奇数，故结果为 $\cos$；将第一象限角 $\al$ 逆时针旋转 $\df{3\pi}2\,\mathrm{rad}$，最终落在第四象限，由于 $\sin$ 在第四象限为负值，所以加负号；因此，最终结果为 $-\cos\al$．
+- $\cos\left(\pi-\al\right)$：
+  1. $k=2$ 为偶数，故结果为 $\cos$；
+  2. 将第一象限角 $\al$ 先对称到 $-\al$，再逆时针旋转 $\pi\,\mathrm{rad}$，最终落在第二象限，由于 $\cos$ 在第二象限为负值，所以加负号；
+  3. 因此，最终结果为 $-\cos\al$．
+- $\sin\left(\df{3\pi}2+\al\right)$：
+  1. $k=3$ 为奇数，故结果为 $\cos$；
+  2. 将第一象限角 $\al$ 逆时针旋转 $\df{3\pi}2\,\mathrm{rad}$，最终落在第四象限，由于 $\sin$ 在第四象限为负值，所以加负号；
+  3. 因此，最终结果为 $-\cos\al$．
 
 ## 三角恒等变换
 
@@ -150,7 +162,7 @@ $$
 $$
 \bga
     \cos 2\al=\cos^2\al-\sin^2\al=2\cos^2\al-1=1-2\sin^2\al,\\
-    \sin\2\al=2\sin\al\cos\al=(\sin\al+\cos\al)^2-1=1-(\sin\al-\cos\al)^2.
+    \sin 2\al=2\sin\al\cos\al=(\sin\al+\cos\al)^2-1=1-(\sin\al-\cos\al)^2.
 \ega
 $$
 
@@ -176,7 +188,7 @@ $$
 $$
 \bga
     \tan\al\pm\tan\be&=(\tan\al\pm\be)(1\mp\tan\al\tan\be),\\
-    \tan\al\tan\be=1-\fr{\tan\al+\tan\be}{\tan(\al+\be)}=\fr{\tan\al-\tan\be}{\tan(\al-\be)}-1.
+    \tan\al\tan\be&=1-\fr{\tan\al+\tan\be}{\tan(\al+\be)}=\fr{\tan\al-\tan\be}{\tan(\al-\be)}-1.
 \ega
 $$
 
@@ -209,7 +221,7 @@ $$
 
 :::tip[辅助角公式]
 
-设 $ab\ne0$，则
+设 $a,b\ne0$，则
 $$
     a\sin\al+b\cos\al=\sqrt{a^2+b^2}\sin(\al+\ph),\quad\text{其中}\,\tan\ph=\fr ba.
 $$
