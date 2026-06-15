@@ -10503,17 +10503,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"katex@npm:0.16.8":
-  version: 0.16.8
-  resolution: "katex@npm:0.16.8"
-  dependencies:
-    commander: "npm:^8.3.0"
-  bin:
-    katex: cli.js
-  checksum: 10c0/3bbdfee57b5014498be8c603caba111d77304aec6ffed31b2b802c264537ca4de9fa544cbc46e1648606ecc50ecf3cb7f160d7f65184f91c5e5319b4693de7d5
-  languageName: node
-  linkType: hard
-
 "katex@npm:^0.16.0":
   version: 0.16.11
   resolution: "katex@npm:0.16.11"
@@ -10522,6 +10511,17 @@ __metadata:
   bin:
     katex: cli.js
   checksum: 10c0/be405d45d7228bbfeecd491e0f74d9da0066b5e7b457e3f1dc833de5b63f9e98e40d2ef6b46e1cbe577490a43338c043851da032c45aeec0cc03ad431ef6fd83
+  languageName: node
+  linkType: hard
+
+"katex@npm:^0.16.11":
+  version: 0.16.47
+  resolution: "katex@npm:0.16.47"
+  dependencies:
+    commander: "npm:^8.3.0"
+  bin:
+    katex: cli.js
+  checksum: 10c0/b10f4d0651c60771a48444879e4227255e26e2b2ec061b1ee4b08934863ad2324ba8dbb772455f7768aeb14dfcc13bcd309174a0ddd5ef954a607f644a197710
   languageName: node
   linkType: hard
 
@@ -15980,7 +15980,7 @@ __metadata:
     "@giscus/react": "npm:~2.3.0"
     "@mdx-js/react": "npm:^3.0.0"
     clsx: "npm:^2.0.0"
-    katex: "npm:0.16.8"
+    katex: "npm:^0.16.11"
     prism-react-renderer: "npm:^2.3.0"
     react: "npm:^18.0.0"
     react-dom: "npm:^18.0.0"

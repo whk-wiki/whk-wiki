@@ -4,7 +4,7 @@
  * work well for content-centric websites.
  */
 
-@import 'katex/dist/katex.min.css'; // Import KaTeX CSS for math rendering
+@import 'katex/dist/katex.min.css';
 /* You can override the default Infima variables here. */
 :root {
 	--ifm-color-primary: #2e8555;
