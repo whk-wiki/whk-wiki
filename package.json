@@ -22,6 +22,7 @@
 		"@giscus/react": "~2.3.0",
 		"@mdx-js/react": "^3.0.0",
 		"clsx": "^2.0.0",
+		"katex": "0.16.8",
 		"prism-react-renderer": "^2.3.0",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0",
