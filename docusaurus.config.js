@@ -103,14 +103,6 @@ const config = {
 
 	clientModules: ['./src/katex/copy-tex.mjs'],
 
-	stylesheets: [
-		{
-			href: 'https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.8/katex.min.css',
-			type: 'text/css',
-			crossorigin: 'anonymous',
-		},
-	],
-
 	future: {
 		v4: true,
 		experimental_faster: true,
