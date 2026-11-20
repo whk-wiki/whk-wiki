@@ -54,10 +54,10 @@ $$
    $$
 2. 乘积关系：
    $$
-   \bga
+   \bal
     \sin\al=\cos\al\cdot\tan\al,\quad\cos\al=\sin\al\cdot\cot\al,\quad\tan\al=\sin\al\cdot\sec\al,\\
     \csc\al=\sec\al\cdot\cot\al,\quad\sec\al=\csc\al\cdot\tan\al,\quad\cot\al=\csc\al\cdot\cos\al.
-   \ega
+   \eal
    $$
 3. 倒数关系：
    $$
@@ -100,7 +100,7 @@ $\sin(\pi-\al)=\sin\al$，$\cos(\pi-\al)=-\cos\al$，$\tan(\pi-\al)=-\tan\al$．
 
 :::tip[诱导公式五]
 
-$\sin\left(\df\pi2+\al\right)=\cos\al$，$\cos\left(\df\pi2+\al\right)=-\sin\al$，*$\tan\left(\df\pi2+\al\right)=\cot\al$．
+$\sin\left(\df\pi2+\al\right)=\cos\al$，$\cos\left(\df\pi2+\al\right)=-\sin\al$，*$\tan\left(\df\pi2+\al\right)=-\cot\al$．
 
 :::
 
@@ -135,9 +135,9 @@ $\sin\left(\df\pi2-\al\right)=\cos\al$，$\cos\left(\df\pi2-\al\right)=\sin\al$�
 
 $$
 \bal
-    &\sin(\al\pm\be)=\sin\al\cos\be\pm\cos\al\sin\be, \\
-	&\cos(\al\pm\be)=\cos\al\cos\be\mp\sin\al\sin\be, \\
-	&\tan(\al\pm\be)=\fr{\tan\al\pm\tan\be}{1\mp\tan\al\tan\be}\quad\al,\be,\al\pm\be\ne k\pi+\fr\pi2,k\in\Z.
+    \sin(\al\pm\be)&=\sin\al\cos\be\pm\cos\al\sin\be, \\
+	\cos(\al\pm\be)&=\cos\al\cos\be\mp\sin\al\sin\be, \\
+	\tan(\al\pm\be)&=\fr{\tan\al\pm\tan\be}{1\mp\tan\al\tan\be}\quad\al,\be,\al\pm\be\ne k\pi+\fr\pi2,k\in\Z.
 \eal
 $$
 
@@ -149,9 +149,9 @@ $$
 
 $$
 \bal
-    &\sin 2\al=2\sin\al\cos\al, \\
-    &\cos 2\al=\cos^2\al-\sin^2\al, \\
-    &\tan 2\al=\fr{2\tan\al}{1-\tan^2\al}.
+    \sin 2\al&=2\sin\al\cos\al, \\
+    \cos 2\al&=\cos^2\al-\sin^2\al, \\
+    \tan 2\al&=\fr{2\tan\al}{1-\tan^2\al}.
 \eal
 $$
 
@@ -160,10 +160,10 @@ $$
 :::tip[推论 1（升幂公式）]
 
 $$
-\bga
-    \cos 2\al=\cos^2\al-\sin^2\al=2\cos^2\al-1=1-2\sin^2\al,\\
-    \sin 2\al=2\sin\al\cos\al=(\sin\al+\cos\al)^2-1=1-(\sin\al-\cos\al)^2.
-\ega
+\bal
+    \cos 2\al&=\cos^2\al-\sin^2\al=2\cos^2\al-1=1-2\sin^2\al,\\
+    \sin 2\al&=2\sin\al\cos\al=(\sin\al+\cos\al)^2-1=1-(\sin\al-\cos\al)^2.
+\eal
 $$
 
 :::
@@ -171,12 +171,12 @@ $$
 :::tip[推论 2（降幂公式）]
 
 $$
-\bga
-    &\cos^2\al=\fr{1+\cos 2\al}2, \\
-    &\sin^2\al=\fr{1-\cos 2\al}2, \\
-    &\sin\al\cos\al=\fr12\sin 2\al, \\
-    &\tan^2\al=\fr{1-\cos 2\al}{1+\cos 2\al}.
-\ega
+\bal
+    \cos^2\al&=\fr{1+\cos 2\al}2, \\
+    \sin^2\al&=\fr{1-\cos 2\al}2, \\
+    \sin\al\cos\al&=\fr12\sin 2\al, \\
+    \tan^2\al&=\fr{1-\cos 2\al}{1+\cos 2\al}.
+\eal
 $$
 
 :::
@@ -186,10 +186,10 @@ $$
 :::tip[推论 3]
 
 $$
-\bga
+\bal
     \tan\al\pm\tan\be&=(\tan\al\pm\be)(1\mp\tan\al\tan\be),\\
     \tan\al\tan\be&=1-\fr{\tan\al+\tan\be}{\tan(\al+\be)}=\fr{\tan\al-\tan\be}{\tan(\al-\be)}-1.
-\ega
+\eal
 $$
 
 :::
@@ -223,7 +223,7 @@ $$
 
 设 $a,b\ne0$，则
 $$
-    a\sin\al+b\cos\al=\sqrt{a^2+b^2}\sin(\al+\ph),\quad\text{其中}\,\tan\ph=\fr ba.
+    a\sin\al\pm b\cos\al=\sqrt{a^2+b^2}\sin(\al\pm\ph),\quad\text{其中}\,\tan\ph=\fr ba.
 $$
 
 :::
@@ -232,3 +232,5 @@ $$
 - $\sin x+\cos x=\sqrt2\sin\left(x+\df\pi4\right)$；
 - $\sin x+\sqrt3\cos x=2\sin\left(x+\df\pi3\right)$；
 - $\sqrt3\sin x+\cos x=2\sin\left(x+\df\pi6\right)$．
+
+注意辅助角公式中 $\sin$ 和 $\cos$ 的先后顺序，如果 $\cos$ 在前 $\sin$ 在后，那么就需要使用 $\cos$ 版本的辅助角公式．不过 $\sin$ 和 $\cos$ 可以通过诱导公式互相转化，因此没有必要记 $\cos$ 版本的公式．

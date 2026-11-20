@@ -50,5 +50,7 @@ export default {
 	"\\om": "\\omega",
 	"\\Om": "\\mathit{\\Omega}",
 	"\\Re": "\\operatorname{Re}",
-	"\\Im": "\\operatorname{Im}"
+	"\\Im": "\\operatorname{Im}",
+	"\\c": "\\mathrm{C}",
+	"\\blank": "\\underline\\qquad"
 }
